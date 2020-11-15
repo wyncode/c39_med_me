@@ -4,6 +4,8 @@ const express = require('express'),
   openRoutes = require('./routes/open');
 
 const app = express();
+const userRouter = require('./routes/patients');
+const exercisesRouter = require('./routes/orders');
 
 //Middleware
 app.use(express.json());
@@ -18,6 +20,8 @@ if (process.env.NODE_ENV === 'production') {
 
 // Any authentication middleware and related routing would be here.
 
+app.use('/api/patients', patientsRouter);
+app.use('/api/orders', ordersRouter);
 // Handle React routing, return all requests to React app
 if (process.env.NODE_ENV === 'production') {
   app.get('*', (request, response) => {
