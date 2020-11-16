@@ -1,4 +1,10 @@
-const Patient = require('../db/models/patient');
+const Patient = require('../db/models/patient'),
+  {
+    sendWelcomeEmail,
+    sendCancellationEmail,
+    forgotPasswordEmail
+  } = require('../emails/index'),
+  jwt = require('jsonwebtoken');
 
 //Get All Patients
 const getAllPatients = async (req, res) => {
@@ -51,7 +57,7 @@ exports.loginPatient = async (req, res) => {
   const { email, password } = req.body;
   try {
     const patient = await Patient.findByCredentials(email, password);
-    const token = await Patient.generateAuthToken();
+    const token = await patient.generateAuthToken();
     res.cookie('jwt', token, {
       httpOnly: true,
       sameSite: 'Strict',
@@ -117,7 +123,7 @@ exports.updateCurrentPatient = async (req, res) => {
     //save the updated PdeletePatient in the db
     await req.patient.save();
     //send the updated PdeletePatient as a response
-    res.json(req.PdeletePatient);
+    res.json(req.deletePatient);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -148,7 +154,7 @@ exports.deletePatient = async (req, res) => {
     await req.deletePatient.remove();
     sendCancellationEmail(req.deletePatient.email, req.deletePatient.name);
     res.clearCookie('jwt');
-    res.json({ message: 'deletePatient deleted' });
+    res.json({ message: 'Patient deleted' });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

@@ -3,8 +3,8 @@ const Patient = require('../db/models/patient');
 
 const getAllOrders = async (req, res) => {
   try {
-    const exercises = await Order.find();
-    res.status(200).json({ orders });
+    const Order = await Order.find();
+    res.status(200).json(orders);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
