@@ -1,4 +1,4 @@
-const Patient = require('../db/models/patient'),
+const User = require('../db/models/user'),
   {
     sendWelcomeEmail,
     sendCancellationEmail,
@@ -6,78 +6,78 @@ const Patient = require('../db/models/patient'),
   } = require('../emails/index'),
   jwt = require('jsonwebtoken');
 
-//Get All Patients
-const getAllPatients = async (req, res) => {
+//Get All Users
+const getAllUsers = async (req, res) => {
   try {
-    const patients = await Patient.find();
-    res.status(200).json({ patients });
+    const users = await User.find();
+    res.status(200).json({ users });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
 
-// Get ONE Patient
-const getOnePatient = async (req, res) => {
+// Get ONE User
+const getOneUser = async (req, res) => {
   try {
-    const patient = await Patient.findById({ _id: req.params.id }).populate(
+    const user = await User.findById({ _id: req.params.id }).populate(
       'exercises'
     );
-    res.status(200).json({ patient });
+    res.status(200).json({ user });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
 
-//Create a new Patient
-const createPatient = async (req, res) => {
+//Create a new User
+const createUser = async (req, res) => {
   const { name, email, password } = req.body;
   try {
-    const createPatient = new createPatient({
+    const createUser = new createUser({
       name,
       email,
       password
     });
-    sendWelcomeEmail(createPatient.email, createPatient.name);
-    const token = await createPatient.generateAuthToken();
+    sendWelcomeEmail(createUser.email, createUser.name);
+    const token = await createUser.generateAuthToken();
     res.cookie('jwt', token, {
       httpOnly: true,
       sameSite: 'Strict',
       secure: process.env.NODE_ENV !== 'production' ? false : true
     });
-    res.status(201).json(createPatient);
+    res.status(201).json(createUser);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
   }
 };
 
 // ***********************************************//
-// Login a patient
+// Login a user
 // ***********************************************//
-const loginPatient = async (req, res) => {
+const loginUser = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const patient = await Patient.findByCredentials(email, password);
-    const token = await patient.generateAuthToken();
+    const user = await User.findByCredentials(email, password);
+    const token = await user.generateAuthToken();
     res.cookie('jwt', token, {
       httpOnly: true,
       sameSite: 'Strict',
       secure: process.env.NODE_ENV !== 'production' ? false : true
     });
-    res.json(patient);
+    res.json(user);
   } catch (e) {
     res.status(400).json({ error: e.toString() });
   }
 };
 // ***********************************************//
-// Patient Password Reset
+// User Password Reset
 // ***********************************************//
 const requestPasswordReset = async (req, res) => {
   try {
     const { email } = req.query;
-    const deletePatient = await deletePatient.findOne({ email });
-    if (!deletePatient) throw new Error('deletePatient not found');
+    const deleteUser = await deleteUser.findOne({ email });
+    if (!deleteUser) throw new Error('deleteUser not found');
     const token = jwt.sign(
-      { _id: deletePatient._id.toString(), name: deletePatient.name },
+      { _id: deleteUser._id.toString(), name: deleteUser.name },
       process.env.JWT_SECRET,
       { expiresIn: '10m' }
     );
@@ -107,9 +107,9 @@ const passwordRedirect = async (req, res) => {
 
 // AUTHENTICATED REQUESTS
 
-//Update a Patient
+//Update a User
 
-const updateCurrentPatient = async (req, res) => {
+const updateCurrentUser = async (req, res) => {
   const updates = Object.keys(req.body); // => ['email', 'name', 'password']
   const allowedUpdates = ['name', 'email', 'password', 'avatar'];
   const isValidOperation = updates.every((update) =>
@@ -118,26 +118,26 @@ const updateCurrentPatient = async (req, res) => {
   if (!isValidOperation)
     return res.status(400).json({ message: 'Invalid updates' });
   try {
-    //Loop through each update, and change the value for the current PdeletePatient to the value coming from the body
-    updates.forEach((update) => (req.patient[update] = req.body[update]));
-    //save the updated PdeletePatient in the db
-    await req.patient.save();
-    //send the updated PdeletePatient as a response
-    res.json(req.deletePatient);
+    //Loop through each update, and change the value for the current PdeleteUser to the value coming from the body
+    updates.forEach((update) => (req.user[update] = req.body[update]));
+    //save the updated PdeleteUser in the db
+    await req.user.save();
+    //send the updated PdeleteUser as a response
+    res.json(req.deleteUser);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
 
 // ***********************************************//
-// Logout a patient
+// Logout a user
 // ***********************************************//
-exports.logoutPatient = async (req, res) => {
+exports.logoutUser = async (req, res) => {
   try {
-    req.patient.tokens = req.patient.tokens.filter((token) => {
+    req.user.tokens = req.user.tokens.filter((token) => {
       return token.token !== req.cookies.jwt;
     });
-    await req.patient.save();
+    await req.user.save();
     res.clearCookie('jwt');
     res.json({ message: 'logged out!' });
   } catch (error) {
@@ -149,12 +149,12 @@ exports.logoutPatient = async (req, res) => {
 // Delete a user
 // ***********************************************//
 
-const deletePatient = async (req, res) => {
+const deleteUser = async (req, res) => {
   try {
-    await req.deletePatient.remove();
-    sendCancellationEmail(req.deletePatient.email, req.deletePatient.name);
+    await req.deleteUser.remove();
+    sendCancellationEmail(req.deleteUser.email, req.deleteUser.name);
     res.clearCookie('jwt');
-    res.json({ message: 'Patient deleted' });
+    res.json({ message: 'User deleted' });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -169,21 +169,21 @@ exports.uploadAvatar = async (req, res) => {
     const response = await cloudinary.uploader.upload(
       req.files.avatar.tempFilePath
     );
-    req.patient.avatar = response.secure_url;
-    await req.patient.save();
+    req.user.avatar = response.secure_url;
+    await req.user.save();
     res.json(response);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
 //************************************ *//
-// Update Patient Password
+// Update User Password
 //************************************ *//
 
 exports.updatePassword = async (req, res) => {
   try {
-    req.patient.password = req.body.password;
-    await req.patient.save();
+    req.user.password = req.body.password;
+    await req.user.save();
     res.clearCookie('jwt');
     res.status(200).json({ message: 'password updated successfully!' });
   } catch (error) {
@@ -192,12 +192,12 @@ exports.updatePassword = async (req, res) => {
 };
 
 module.exports = {
-  getAllPatients,
-  getOnePatient,
-  createPatient,
-  loginPatient,
+  getAllUsers,
+  getOneUser,
+  createUser,
+  loginUser,
   requestPasswordReset,
   passwordRedirect,
-  deletePatient,
-  updateCurrentPatient
+  deleteUser,
+  updateCurrentUser
 };

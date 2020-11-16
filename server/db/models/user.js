@@ -3,7 +3,7 @@ const mongoose = require('mongoose'),
   bcrypt = require('bcryptjs'),
   jwt = require('jsonwebtoken');
 
-const patientSchema = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
     first_name: {
       type: String,
@@ -78,6 +78,11 @@ const patientSchema = new mongoose.Schema(
     avatar: {
       type: String
     },
+    role: {
+      type: String,
+      enum: ['admin', 'patient', 'driver'],
+      default: 'patient'
+    },
     tokens: [
       {
         token: {
@@ -98,54 +103,54 @@ const patientSchema = new mongoose.Schema(
   }
 );
 
-//Create a relationship between patient and Task
-patientSchema.virtual('tasks', {
+//Create a relationship between user and Task
+userSchema.virtual('tasks', {
   ref: 'Task',
   localField: '_id',
   foreignField: 'owner'
 });
 
 // By naming this method toJSON we don't need to call it to run because the express response will do it for us.
-patientSchema.methods.toJSON = function () {
-  const patient = this;
-  const patientObject = patient.toObject();
-  delete patientObject.password;
-  delete patientObject.tokens;
-  return patientObject;
+userSchema.methods.toJSON = function () {
+  const user = this;
+  const userObject = user.toObject();
+  delete userObject.password;
+  delete userObject.tokens;
+  return userObject;
 };
-//creating an instance method called `generateAuthToken` we can use in the controller everytime a patient is created or signs in.
-patientSchema.methods.generateAuthToken = async function () {
-  const patient = this;
+//creating an instance method called `generateAuthToken` we can use in the controller everytime a user is created or signs in.
+userSchema.methods.generateAuthToken = async function () {
+  const user = this;
   const token = jwt.sign(
     {
-      _id: patient._id.toString(),
-      name: patient.name
+      _id: user._id.toString(),
+      name: user.name
     },
     process.env.JWT_SECRET,
     { expiresIn: '24h' }
   );
-  patient.tokens = patient.tokens.concat({ token });
-  await patient.save();
+  user.tokens = user.tokens.concat({ token });
+  await user.save();
   return token;
 };
 
-// creating an instance method called `findByCredentials` that finds patient by email and password in our DB to login.
-patientSchema.statics.findByCredentials = async (email, password) => {
-  const patient = await patient.findOne({ email });
-  if (!patient) throw new Error('patient not found');
-  const isMatch = await bcrypt.compare(password, patient.password);
+// creating an instance method called `findByCredentials` that finds user by email and password in our DB to login.
+userSchema.statics.findByCredentials = async (email, password) => {
+  const user = await user.findOne({ email });
+  if (!user) throw new Error('user not found');
+  const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) throw new Error('Invalid password, try again.');
-  return patient;
+  return user;
 };
 
-// This mongoose middleware will hash our patient's passwords whenever a patient is created or a patient password is updated.
-patientSchema.pre('save', async function (next) {
-  const patient = this;
-  if (patient.isModified('password'))
-    patient.password = await bcrypt.hash(patient.password, 8);
+// This mongoose middleware will hash our user's passwords whenever a user is created or a user password is updated.
+userSchema.pre('save', async function (next) {
+  const user = this;
+  if (user.isModified('password'))
+    user.password = await bcrypt.hash(user.password, 8);
   next();
 });
 
-const Patient = mongoose.model('Patient', patientSchema);
+const User = mongoose.model('User', userSchema);
 
-module.exports = Patient;
+module.exports = User;

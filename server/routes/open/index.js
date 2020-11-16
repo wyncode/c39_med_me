@@ -1,16 +1,14 @@
 const router = require('express').Router(),
   {
-    createPatient,
-    loginPatient,
+    createUser,
+    loginUser,
     requestPasswordReset,
     passwordRedirect
-  } = require('../../controllers/patients');
+  } = require('../../controllers/users');
 
-router.post('/', createPatient);
-router.post('/login', loginPatient);
+router.post('/', createUser);
+router.post('/login', loginUser);
 router.get('/password', requestPasswordReset);
 router.get('/password/:token', passwordRedirect);
 
 module.exports = router;
-
-
