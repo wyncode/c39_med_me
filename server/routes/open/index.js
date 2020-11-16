@@ -1,11 +1,16 @@
-const router = require('express').Router();
+const router = require('express').Router(),
+  {
+    createPatient,
+    loginPatient,
+    requestPasswordReset,
+    passwordRedirect
+  } = require('../../controllers/patients');
 
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-router.get('/api/demo', (request, response) => {
-  response.json({
-    message: 'Hello from server.js'
-  });
-});
-// END DEMO
+router.post('/', createPatient);
+router.post('/login', loginPatient);
+router.get('/password', requestPasswordReset);
+router.get('/password/:token', passwordRedirect);
 
 module.exports = router;
+
+
