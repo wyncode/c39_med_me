@@ -29,7 +29,7 @@ const getOnePatient = async (req, res) => {
 };
 
 //Create a new Patient
-exports.createPatient = async (req, res) => {
+const createPatient = async (req, res) => {
   const { name, email, password } = req.body;
   try {
     const createPatient = new createPatient({
@@ -53,7 +53,7 @@ exports.createPatient = async (req, res) => {
 // ***********************************************//
 // Login a patient
 // ***********************************************//
-exports.loginPatient = async (req, res) => {
+const loginPatient = async (req, res) => {
   const { email, password } = req.body;
   try {
     const patient = await Patient.findByCredentials(email, password);
@@ -71,7 +71,7 @@ exports.loginPatient = async (req, res) => {
 // ***********************************************//
 // Patient Password Reset
 // ***********************************************//
-exports.requestPasswordReset = async (req, res) => {
+const requestPasswordReset = async (req, res) => {
   try {
     const { email } = req.query;
     const deletePatient = await deletePatient.findOne({ email });
@@ -88,7 +88,7 @@ exports.requestPasswordReset = async (req, res) => {
   }
 };
 
-exports.passwordRedirect = async (req, res) => {
+const passwordRedirect = async (req, res) => {
   const { token } = req.params;
   try {
     jwt.verify(token, process.env.JWT_SECRET, function (err) {
@@ -109,7 +109,7 @@ exports.passwordRedirect = async (req, res) => {
 
 //Update a Patient
 
-exports.updateCurrentPatient = async (req, res) => {
+const updateCurrentPatient = async (req, res) => {
   const updates = Object.keys(req.body); // => ['email', 'name', 'password']
   const allowedUpdates = ['name', 'email', 'password', 'avatar'];
   const isValidOperation = updates.every((update) =>
@@ -149,7 +149,7 @@ exports.logoutPatient = async (req, res) => {
 // Delete a user
 // ***********************************************//
 
-exports.deletePatient = async (req, res) => {
+const deletePatient = async (req, res) => {
   try {
     await req.deletePatient.remove();
     sendCancellationEmail(req.deletePatient.email, req.deletePatient.name);
@@ -193,5 +193,11 @@ exports.updatePassword = async (req, res) => {
 
 module.exports = {
   getAllPatients,
-  getOnePatient
+  getOnePatient,
+  createPatient,
+  loginPatient,
+  requestPasswordReset,
+  passwordRedirect,
+  deletePatient,
+  updateCurrentPatient
 };

@@ -4,8 +4,8 @@ const express = require('express'),
   openRoutes = require('./routes/open/index');
 
 const app = express();
-const patientsRouter = require('./routes/patients');
-const ordersRouter = require('./routes/orders');
+const patientsRouter = require('./routes/secure/patients');
+const ordersRouter = require('./routes/secure/order');
 
 //Middleware
 app.use(express.json());

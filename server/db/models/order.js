@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const orderSchema = mongoose.Schema({
-  fist_name: {
+  fistName: {
     type: String,
     required: true,
     trim: true
   },
-  last_name: {
+  lastName: {
     type: String,
     required: true,
     trim: true
@@ -18,7 +18,7 @@ const orderSchema = mongoose.Schema({
       }
     }
   ],
-  TotalPrice: {
+  totalPrice: {
     type: Number
   },
 
