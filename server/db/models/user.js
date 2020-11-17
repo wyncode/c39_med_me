@@ -103,12 +103,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-//Create a relationship between user and Task
-userSchema.virtual('tasks', {
-  ref: 'Task',
-  localField: '_id',
-  foreignField: 'owner'
-});
 
 // By naming this method toJSON we don't need to call it to run because the express response will do it for us.
 userSchema.methods.toJSON = function () {
