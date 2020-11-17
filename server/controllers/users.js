@@ -19,9 +19,7 @@ const getAllUsers = async (req, res) => {
 // Get ONE User
 const getOneUser = async (req, res) => {
   try {
-    const user = await User.findById({ _id: req.params.id }).populate(
-      'exercises'
-    );
+    const user = await User.findById({ _id: req.params.id });
     res.status(200).json({ user });
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -30,10 +28,32 @@ const getOneUser = async (req, res) => {
 
 //Create a new User
 const createUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const {
+    first_name,
+    last_name,
+    gender,
+    dob,
+    address,
+    city,
+    state,
+    zip,
+    phone,
+    email,
+    password
+  } = req.body;
+
+  console.log(req.body);
   try {
-    const createUser = new createUser({
-      name,
+    const createUser = new User({
+      first_name,
+      last_name,
+      gender,
+      dob,
+      address,
+      city,
+      state,
+      zip,
+      phone,
       email,
       password
     });
