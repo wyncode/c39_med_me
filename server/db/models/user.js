@@ -47,7 +47,7 @@ const userSchema = new mongoose.Schema(
     },
     phone: {
       type: Number,
-      requiered: true,
+      required: true,
       trim: true
     },
     email: {
