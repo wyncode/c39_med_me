@@ -5,12 +5,13 @@ const mongoose = require('mongoose'),
 
 const userSchema = new mongoose.Schema(
   {
-    first_name: {
+    name: {
       type: String,
       required: true,
       trim: true
     },
-    last_name: {
+
+    address: {
       type: String,
       required: true,
       trim: true
@@ -25,26 +26,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
-    address: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    city: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    state: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    zip: {
-      type: String,
-      required: true,
-      trim: true
-    },
+
     phone: {
       type: Number,
       requiered: true,
@@ -102,7 +84,6 @@ const userSchema = new mongoose.Schema(
     timestamps: true
   }
 );
-
 
 // By naming this method toJSON we don't need to call it to run because the express response will do it for us.
 userSchema.methods.toJSON = function () {

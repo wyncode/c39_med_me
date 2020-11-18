@@ -1,12 +1,15 @@
 const router = require('express').Router(),
   {
     createUser,
+
     loginUser,
     requestPasswordReset,
-    passwordRedirect
+    passwordRedirect,
+    getAllUsers
   } = require('../../controllers/users');
 
-router.post('/', createUser);
+router.get('/', getAllUsers);
+router.post('/me', createUser);
 router.post('/login', loginUser);
 router.get('/password', requestPasswordReset);
 router.get('/password/:token', passwordRedirect);

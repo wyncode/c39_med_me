@@ -19,9 +19,7 @@ const getAllUsers = async (req, res) => {
 // Get ONE User
 const getOneUser = async (req, res) => {
   try {
-    const user = await User.findById({ _id: req.params.id }).populate(
-      'exercises'
-    );
+    const user = await User.findById({ _id: req.params.id }).populate('user');
     res.status(200).json({ user });
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -29,11 +27,16 @@ const getOneUser = async (req, res) => {
 };
 
 //Create a new User
+
 const createUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, address, gender, dob, phone, email, password } = req.body;
   try {
-    const createUser = new createUser({
+    const createUser = new User({
       name,
+      address,
+      gender,
+      dob,
+      phone,
       email,
       password
     });
@@ -61,7 +64,7 @@ const loginUser = async (req, res) => {
     res.cookie('jwt', token, {
       httpOnly: true,
       sameSite: 'Strict',
-      secure: process.env.NODE_ENV === 'production' 
+      secure: process.env.NODE_ENV === 'production'
     });
     res.json(user);
   } catch (e) {
