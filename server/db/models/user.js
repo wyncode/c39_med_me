@@ -5,12 +5,7 @@ const mongoose = require('mongoose'),
 
 const userSchema = new mongoose.Schema(
   {
-    first_name: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    last_name: {
+    name: {
       type: String,
       required: true,
       trim: true
@@ -26,21 +21,6 @@ const userSchema = new mongoose.Schema(
       trim: true
     },
     address: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    city: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    state: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    zip: {
       type: String,
       required: true,
       trim: true

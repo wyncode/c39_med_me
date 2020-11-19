@@ -28,31 +28,14 @@ const getOneUser = async (req, res) => {
 
 //Create a new User
 const createUser = async (req, res) => {
-  const {
-    first_name,
-    last_name,
-    gender,
-    dob,
-    address,
-    city,
-    state,
-    zip,
-    phone,
-    email,
-    password
-  } = req.body;
+  const { name, gender, dob, address, phone, email, password } = req.body;
 
-  console.log(req.body);
   try {
     const createUser = new User({
-      first_name,
-      last_name,
+      name,
       gender,
       dob,
       address,
-      city,
-      state,
-      zip,
       phone,
       email,
       password
@@ -81,7 +64,7 @@ const loginUser = async (req, res) => {
     res.cookie('jwt', token, {
       httpOnly: true,
       sameSite: 'Strict',
-      secure: process.env.NODE_ENV === 'production' 
+      secure: process.env.NODE_ENV === 'production'
     });
     res.json(user);
   } catch (e) {
