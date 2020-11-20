@@ -5,12 +5,7 @@ const mongoose = require('mongoose'),
 
 const userSchema = new mongoose.Schema(
   {
-    first_name: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    last_name: {
+    name: {
       type: String,
       required: true,
       trim: true
@@ -26,21 +21,6 @@ const userSchema = new mongoose.Schema(
       trim: true
     },
     address: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    city: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    state: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    zip: {
       type: String,
       required: true,
       trim: true
@@ -103,7 +83,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-
 // By naming this method toJSON we don't need to call it to run because the express response will do it for us.
 userSchema.methods.toJSON = function () {
   const user = this;
@@ -130,7 +109,7 @@ userSchema.methods.generateAuthToken = async function () {
 
 // creating an instance method called `findByCredentials` that finds user by email and password in our DB to login.
 userSchema.statics.findByCredentials = async (email, password) => {
-  const user = await user.findOne({ email });
+  const user = await User.findOne({ email });
   if (!user) throw new Error('user not found');
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) throw new Error('Invalid password, try again.');
