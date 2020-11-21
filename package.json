@@ -6,7 +6,6 @@
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
     "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.5.3",
     "cloudinary": "^1.23.0",
     "concurrently": "^5.3.0",
     "cookie-parser": "^1.4.5",
@@ -14,17 +13,12 @@
     "express-fileupload": "^1.2.0",
     "faker": "^5.1.0",
     "jsonwebtoken": "^8.5.1",
-    "material-auto-rotating-carousel": "^3.0.2",
-    "mdbreact": "^4.27.0",
     "moment": "^2.29.1",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.9",
     "node-sass": "^5.0.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "pure-react-carousel": "^1.27.6",
-    "react-bootstrap": "^1.4.0",
-    "react-swipeable-views": "^0.13.9",
     "validator": "^13.1.17"
   },
   "devDependencies": {
