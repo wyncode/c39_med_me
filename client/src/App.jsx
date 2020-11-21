@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppContextProvider } from './context/AppContext';
 import ContextDemo from './components/ContextDemo';
+import Carousel from './components/Carousel/Carousel';
 
 import './App.css';
 
@@ -18,9 +19,8 @@ const App = () => {
   return (
     <AppContextProvider>
       <div id="demo">
-        <h3>Hello from client/src/App.js</h3>
+        <Carousel />
         <ContextDemo />
-        <h3>{serverMessage}</h3>
       </div>
     </AppContextProvider>
   );
