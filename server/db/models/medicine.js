@@ -28,6 +28,10 @@ const medicineSchema = mongoose.Schema({
   avatar: {
     type: String,
     required: true
+  },
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }
 });
 

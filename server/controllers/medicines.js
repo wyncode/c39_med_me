@@ -4,9 +4,9 @@ const createMedicine = async (req, res) => {
   try {
     const medicine = new Medicine(req.body);
     await medicine.save();
-    const medicine = await Medicine.findById({ _id: req.body.userId });
+    const user = await User.findById(req.body.userId);
     console.log(medicine);
-    await medicine.push(medicine._id);
+    await user.push(medicine._id);
     await user.save();
     res.status(200).json({ medicine });
   } catch (error) {
@@ -16,6 +16,8 @@ const createMedicine = async (req, res) => {
 
 const deleteMedicine = async (req, res) => {
   try {
+    const medicine = await Medicine.findById(req.params.id);
+    await medicine.remove();
     await req.deleteMedicine.remove();
     res.json({ message: 'Medicine deleted' });
   } catch (error) {
