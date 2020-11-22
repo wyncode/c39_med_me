@@ -76,12 +76,19 @@ const userSchema = new mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Order'
       }
-    ]
+    ],
+    medicineCabinet: [{ type: String }]
   },
   {
     timestamps: true
   }
 );
+// Create Virtual relationg between users and orders.
+userSchema.virtual('order', {
+  ref: 'Order',
+  localField: '_id',
+  foreignField: 'owner'
+});
 
 // By naming this method toJSON we don't need to call it to run because the express response will do it for us.
 userSchema.methods.toJSON = function () {

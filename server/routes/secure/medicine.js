@@ -6,7 +6,7 @@ const {
   updateMedicine
 } = require('../../controllers/medicines');
 
-router.get('/', getOneMedicine);
+router.get('/:id', getOneMedicine);
 router.post('/', createMedicine);
 router.delete('/:id', deleteMedicine);
 router.put('/:id', updateMedicine);

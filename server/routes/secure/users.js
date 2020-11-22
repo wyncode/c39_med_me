@@ -8,9 +8,8 @@ const {
 } = require('../../controllers/users');
 
 router.get('/', getAllUsers);
-router.get('/:id/', getOneUser);
+router.get('/:id', getOneUser);
 router.delete('/:id', deleteUser);
-s;
 router.put('/:id', updateCurrentUser);
 router.post('/logout', logoutUser);
 

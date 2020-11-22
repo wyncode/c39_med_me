@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const orderSchema = mongoose.Schema({
-  fistName: {
+  firstName: {
     type: String,
     required: true,
     trim: true
@@ -14,10 +14,17 @@ const orderSchema = mongoose.Schema({
   prescriptions: [
     {
       medicinesId: {
-        type: String
+        type: String,
+        required: true
       }
     }
   ],
+
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+
   totalPrice: {
     type: Number
   },
