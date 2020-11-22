@@ -135,7 +135,7 @@ const updateCurrentUser = async (req, res) => {
 // ***********************************************//
 // Logout a user
 // ***********************************************//
-exports.logoutUser = async (req, res) => {
+const logoutUser = async (req, res) => {
   try {
     req.user.tokens = req.user.tokens.filter((token) => {
       return token.token !== req.cookies.jwt;
@@ -167,7 +167,7 @@ const deleteUser = async (req, res) => {
 // Upload avatar
 // ***********************************************//
 
-exports.uploadAvatar = async (req, res) => {
+const uploadAvatar = async (req, res) => {
   try {
     const response = await cloudinary.uploader.upload(
       req.files.avatar.tempFilePath
@@ -183,7 +183,7 @@ exports.uploadAvatar = async (req, res) => {
 // Update User Password
 //************************************ *//
 
-exports.updatePassword = async (req, res) => {
+const updatePassword = async (req, res) => {
   try {
     req.user.password = req.body.password;
     await req.user.save();
@@ -199,8 +199,11 @@ module.exports = {
   getOneUser,
   createUser,
   loginUser,
+  logoutUser,
   requestPasswordReset,
   passwordRedirect,
   deleteUser,
-  updateCurrentUser
+  updateCurrentUser,
+  updatePassword,
+  uploadAvatar
 };
