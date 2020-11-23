@@ -6,6 +6,7 @@ const express = require('express'),
 const app = express();
 const usersRouter = require('./routes/secure/users');
 const ordersRouter = require('./routes/secure/order');
+const medicineRouter = require('./routes/secure/medicine');
 const cookieParser = require('cookie-parser');
 
 //Middleware
@@ -27,6 +28,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use('/api/*', passport.authenticate('jwt', { session: false }));
 app.use('/api/users', usersRouter);
 app.use('/api/orders', ordersRouter);
+app.use('/api/medicine', medicineRouter);
 
 // Handle React routing, return all requests to React app
 

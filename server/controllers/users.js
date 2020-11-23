@@ -77,10 +77,10 @@ const loginUser = async (req, res) => {
 const requestPasswordReset = async (req, res) => {
   try {
     const { email } = req.query;
-    const deleteUser = await deleteUser.findOne({ email });
-    if (!deleteUser) throw new Error('deleteUser not found');
+    const user = await User.findOne({ email });
+    if (!user) throw new Error('User not found');
     const token = jwt.sign(
-      { _id: deleteUser._id.toString(), name: deleteUser.name },
+      { _id: user._id.toString(), name: user.name },
       process.env.JWT_SECRET,
       { expiresIn: '10m' }
     );
@@ -121,12 +121,12 @@ const updateCurrentUser = async (req, res) => {
   if (!isValidOperation)
     return res.status(400).json({ message: 'Invalid updates' });
   try {
-    //Loop through each update, and change the value for the current PdeleteUser to the value coming from the body
+    //Loop through each update, and change the value for the current deleteUser to the value coming from the body
     updates.forEach((update) => (req.user[update] = req.body[update]));
-    //save the updated PdeleteUser in the db
+    //save the updated deleteUser in the db
     await req.user.save();
-    //send the updated PdeleteUser as a response
-    res.json(req.deleteUser);
+    //send the updated deleteUser as a response
+    res.json(req.user);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -135,7 +135,7 @@ const updateCurrentUser = async (req, res) => {
 // ***********************************************//
 // Logout a user
 // ***********************************************//
-exports.logoutUser = async (req, res) => {
+const logoutUser = async (req, res) => {
   try {
     req.user.tokens = req.user.tokens.filter((token) => {
       return token.token !== req.cookies.jwt;
@@ -154,8 +154,8 @@ exports.logoutUser = async (req, res) => {
 
 const deleteUser = async (req, res) => {
   try {
-    await req.deleteUser.remove();
-    sendCancellationEmail(req.deleteUser.email, req.deleteUser.name);
+    await req.user.remove();
+    sendCancellationEmail(req.user.email, req.user.name);
     res.clearCookie('jwt');
     res.json({ message: 'User deleted' });
   } catch (error) {
@@ -167,7 +167,7 @@ const deleteUser = async (req, res) => {
 // Upload avatar
 // ***********************************************//
 
-exports.uploadAvatar = async (req, res) => {
+const uploadAvatar = async (req, res) => {
   try {
     const response = await cloudinary.uploader.upload(
       req.files.avatar.tempFilePath
@@ -183,7 +183,7 @@ exports.uploadAvatar = async (req, res) => {
 // Update User Password
 //************************************ *//
 
-exports.updatePassword = async (req, res) => {
+const updatePassword = async (req, res) => {
   try {
     req.user.password = req.body.password;
     await req.user.save();
@@ -199,8 +199,11 @@ module.exports = {
   getOneUser,
   createUser,
   loginUser,
+  logoutUser,
   requestPasswordReset,
   passwordRedirect,
   deleteUser,
-  updateCurrentUser
+  updateCurrentUser,
+  updatePassword,
+  uploadAvatar
 };
