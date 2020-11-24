@@ -5,7 +5,7 @@ const createMedicine = async (req, res) => {
     const medicine = new Medicine(req.body);
     await medicine.save();
     console.log(medicine);
-    res.status(200).json({ medicine });
+    res.status(200).json(medicine);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
@@ -54,9 +54,19 @@ const getOneMedicine = async (req, res) => {
   }
 };
 
+const getAllMedicine = async (req, res) => {
+  try {
+    const medicines = await Medicine.find();
+    res.status(200).json(medicines);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 module.exports = {
   createMedicine,
   deleteMedicine,
   updateMedicine,
-  getOneMedicine
+  getOneMedicine,
+  getAllMedicine
 };

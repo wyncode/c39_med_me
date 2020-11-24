@@ -70,6 +70,12 @@ const userSchema = new mongoose.Schema(
           required: true
         }
       }
+    ],
+    medicineCabinet: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Medicine'
+      }
     ]
   },
   {

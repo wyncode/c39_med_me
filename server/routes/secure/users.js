@@ -15,5 +15,5 @@ router.delete('/:id', deleteUser);
 router.put('/updateuser/:id', updateCurrentUser);
 router.put('/updatepassword/:id', updatePassword);
 router.post('/logout', logoutUser);
-router.get('/getCurrentUser', getCurrentUser);
+router.get('/me', getCurrentUser);
 module.exports = router;
