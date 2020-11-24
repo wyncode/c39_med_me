@@ -1,38 +1,30 @@
 const mongoose = require('mongoose');
 
-const orderSchema = mongoose.Schema({
-  firstName: {
-    type: String,
-    required: true,
-    trim: true
-  },
-  lastName: {
-    type: String,
-    required: true,
-    trim: true
-  },
-  prescriptions: [
-    {
-      medicinesId: {
-        type: String,
-        required: true
+const orderSchema = mongoose.Schema(
+  {
+    prescriptions: [
+      {
+        type: mongoose.SchemaTypes.ObjectId
       }
+    ],
+
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+    },
+
+    totalPrice: {
+      type: Number
+    },
+
+    delivery: {
+      type: Boolean
     }
-  ],
-
-  owner: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
   },
-
-  totalPrice: {
-    type: Number
-  },
-
-  delivery: {
-    type: Boolean
+  {
+    timestamps: true
   }
-});
+);
 
 const Order = mongoose.model('Order', orderSchema);
 

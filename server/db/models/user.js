@@ -70,21 +70,14 @@ const userSchema = new mongoose.Schema(
           required: true
         }
       }
-    ],
-    orders: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Order'
-      }
-    ],
-    medicineCabinet: [{ type: String }]
+    ]
   },
   {
     timestamps: true
   }
 );
 // Create Virtual relationg between users and orders.
-userSchema.virtual('order', {
+userSchema.virtual('orders', {
   ref: 'Order',
   localField: '_id',
   foreignField: 'owner'

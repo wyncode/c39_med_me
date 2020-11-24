@@ -1,5 +1,20 @@
 const Order = require('../db/models/order');
-const User = require('../db/models/user');
+
+const getOrder = async (req, res) => {
+  const { id } = req.params;
+
+  const order = await Order.findById(id).populate('prescriptions');
+
+  res.send(order);
+};
+
+const getUserOrders = async (req, res) => {
+  const owner = req.user._id;
+
+  const orders = await Order.find({ owner }).populate('prescriptions');
+
+  res.send(orders);
+};
 
 const getAllOrders = async (req, res) => {
   try {
@@ -13,15 +28,14 @@ const getAllOrders = async (req, res) => {
 const createOrder = async (req, res) => {
   try {
     const order = new Order(req.body);
+    order.owner = req.user._id;
+
     await order.save();
-    const user = await User.findById({ _id: req.body.userId });
-    console.log(user);
-    await user.orders.push(order._id);
-    await user.save();
-    res.status(200).json({ user });
+
+    res.status(200).json({ order });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
 
-module.exports = { getAllOrders, createOrder };
+module.exports = { getAllOrders, createOrder, getUserOrders, getOrder };
