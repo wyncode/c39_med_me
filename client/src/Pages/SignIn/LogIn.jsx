@@ -22,7 +22,7 @@ const LogIn = ({ history }) => {
       sessionStorage.setItem('user', response.data);
       history.push('/');
     } catch (error) {
-      swal(`Oops!`, 'Something went wrong.');
+      swal(`Oops!`, 'Invalid email or password.');
     }
   };
 
@@ -41,11 +41,11 @@ const LogIn = ({ history }) => {
         </div>
         <div className="dataformcontainer">
           <h2>Email</h2>
-          <input type="text" name="name" onChange={handleChange} />
+          <input type="text" name="email" onChange={handleChange} />
         </div>
         <div className="dataformcontainer">
           <h2>Password</h2>
-          <input type="text" name="name" onChange={handleChange} />
+          <input type="password" name="password" onChange={handleChange} />
         </div>
       </form>
       <div className="createaccountcontainer">
