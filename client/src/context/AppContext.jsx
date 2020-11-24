@@ -1,22 +1,47 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
+import axios from 'axios';
+import swal from 'sweetalert';
 
-export const AppContext = createContext();
+const AppContext = createContext();
 
-export const AppContextProvider = ({ children }) => {
-  const [contextMessage, setContextMessage] = useState('');
+const AppContextProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState(null);
+  //   const [search, setSearch] = useState('');
+  //   const [currentFilter, setCurrentFilter] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const user = sessionStorage.getItem('user');
 
-  const contextMethod = () => {
-    setContextMessage('Hello from client/src/context/AppContext.jsx');
-  };
+  useEffect(() => {
+    if (user && !currentUser) {
+      axios
+        .get(`/api/users/me`, {
+          withCredentials: true
+        })
+        .then(({ data }) => {
+          setCurrentUser(data);
+        })
+        .catch((error) => {
+          swal(`Oops!`, error.toString());
+        });
+    }
+  }, [currentUser, user]);
 
   return (
     <AppContext.Provider
       value={{
-        contextMessage,
-        contextMethod
+        currentUser,
+        setCurrentUser
+        // loading,
+        // setLoading,
+        // search,
+        // setSearch,
+        // currentFilter,
+        // setCurrentFilter
       }}
     >
       {children}
     </AppContext.Provider>
   );
 };
+
+export { AppContext, AppContextProvider };
