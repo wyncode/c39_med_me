@@ -17,7 +17,7 @@ const medicineSchema = mongoose.Schema({
     trim: true
   },
   dosage: {
-    type: Number,
+    type: String,
     required: true,
     trim: true
   },

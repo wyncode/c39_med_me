@@ -16,6 +16,26 @@ const getAllUsers = async (req, res) => {
   }
 };
 
+const getCurrentUser = async (req, res) => {
+  const { _id } = req.user;
+  console.log('what is the id', {
+    user: req.user,
+    _id
+  });
+  const currentUser = await User.findById(_id).populate({
+    path: 'orders',
+    populate: {
+      path: 'prescriptions',
+      model: 'Medicine'
+    }
+  });
+
+  res.send({
+    ...currentUser.toObject(),
+    orders: currentUser.orders
+  });
+};
+
 // Get ONE User
 const getOneUser = async (req, res) => {
   try {
@@ -198,6 +218,7 @@ module.exports = {
   getAllUsers,
   getOneUser,
   createUser,
+  getCurrentUser,
   loginUser,
   logoutUser,
   requestPasswordReset,

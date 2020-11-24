@@ -4,13 +4,16 @@ const {
   logoutUser,
   getOneUser,
   deleteUser,
-  updateCurrentUser
+  updateCurrentUser,
+  updatePassword,
+  getCurrentUser
 } = require('../../controllers/users');
 
 router.get('/', getAllUsers);
-router.get('/:id', getOneUser);
+router.get('/find/:id', getOneUser);
 router.delete('/:id', deleteUser);
-router.put('/:id', updateCurrentUser);
+router.put('/updateuser/:id', updateCurrentUser);
+router.put('/updatepassword/:id', updatePassword);
 router.post('/logout', logoutUser);
-
+router.get('/getCurrentUser', getCurrentUser);
 module.exports = router;
