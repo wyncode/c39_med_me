@@ -29,10 +29,12 @@ const createOrder = async (req, res) => {
   try {
     const order = new Order(req.body);
     order.owner = req.user._id;
+    req.body.medicine.forEach((medicineId) => {
+      order.prescriptions.push(medicineId);
+    });
 
     await order.save();
-
-    res.status(200).json({ order });
+    res.status(200).json(order);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }

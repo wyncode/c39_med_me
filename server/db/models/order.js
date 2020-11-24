@@ -4,7 +4,8 @@ const orderSchema = mongoose.Schema(
   {
     prescriptions: [
       {
-        type: mongoose.SchemaTypes.ObjectId
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: 'Medicine'
       }
     ],
 

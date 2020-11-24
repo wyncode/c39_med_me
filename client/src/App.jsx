@@ -1,29 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import LogIn from './Pages/SignIn/LogIn';
+import SignUp from './Pages/SignUp/SignUp';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
-import ContextDemo from './components/ContextDemo';
 
-import './App.css';
-
-const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
-
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
-
-  useEffect(fetchDemoData, []);
-
+function App() {
   return (
-    <AppContextProvider>
-      <div id="demo">
-        <h3>Hello from client/src/App.js</h3>
-        <ContextDemo />
-        <h3>{serverMessage}</h3>
-      </div>
-    </AppContextProvider>
+    <div>
+      <h1>
+        <AppContextProvider>
+          <Router>
+            <Switch>
+              <Route exact path="/login" component={LogIn} />
+              <Route exact path="/signup" component={SignUp} />
+            </Switch>
+          </Router>
+        </AppContextProvider>
+      </h1>
+    </div>
   );
-};
+}
 
 export default App;

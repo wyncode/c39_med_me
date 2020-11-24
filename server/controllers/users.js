@@ -17,23 +17,34 @@ const getAllUsers = async (req, res) => {
 };
 
 const getCurrentUser = async (req, res) => {
-  const { _id } = req.user;
-  console.log('what is the id', {
-    user: req.user,
-    _id
-  });
-  const currentUser = await User.findById(_id).populate({
-    path: 'orders',
-    populate: {
-      path: 'prescriptions',
-      model: 'Medicine'
-    }
-  });
+  // const { _id } = req.user;
+  // console.log('what is the id', {
+  //   user: req.user,
+  //   _id
+  // });
+  // const currentUser = await User.findById(_id).populate({
+  //   path: 'orders',
+  //   populate: {
+  //     path: 'prescriptions',
+  //     model: 'Medicine'
+  //   }
+  // });
 
-  res.send({
-    ...currentUser.toObject(),
-    orders: currentUser.orders
-  });
+  // res.send({
+  //   ...currentUser.toObject(),
+  //   orders: currentUser.orders
+  // });
+  await req.user
+    .populate({
+      path: 'orders',
+      model: 'Order',
+      populate: {
+        path: 'prescriptions',
+        model: 'Medicine'
+      }
+    })
+    .execPopulate();
+  res.json({ user: req.user, orders: req.user.orders });
 };
 
 // Get ONE User
