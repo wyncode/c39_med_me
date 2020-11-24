@@ -16,7 +16,7 @@ const SignUp = ({ history }) => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api', formData);
+      const response = await axios.post('/api/me', formData);
       sessionStorage.setItem('user', response.data);
       setCurrentUser(response.data.user);
       history.push('/');
