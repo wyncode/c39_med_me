@@ -1,0 +1,56 @@
+img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100px;
+  width: 100px;
+}
+
+.familyimage {
+  height: 300px;
+  width: 300px;
+}
+
+.refillimage {
+  display: flex;
+  margin: 0px;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.calendarimage {
+  display: flex;
+  margin: 0px;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.dailylogimage {
+  display: flex;
+  margin: 0px;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.shopimage {
+  display: flex;
+  margin: 0px;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+a:link {
+  background-color: #eff8ff;
+  height: 150px;
+  width: 150px;
+}
+
+.medicinesrow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dailylogrow {
+  display: flex;
+  justify-content: space-around;
+}
