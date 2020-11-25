@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.0",
+    "moment": "^2.29.1",
+    "moment-range": "^4.0.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
