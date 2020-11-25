@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import LogIn from './Pages/SignIn/LogIn';
 import SignUp from './Pages/SignUp/SignUp';
-import shop from './Pages/Shop/shop';
+import shop from './Pages/Shop/Shop';
 import Home from './Pages/Home/Home';
+import PrivateRoute from './components/PrivateRoute';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
 import DailyLog from './Pages/DailyLog/DailyLog';
 import Calendar from './Pages/calendar/';
 import moment from 'moment';
-
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(moment());
@@ -34,7 +34,8 @@ function App() {
                     onChange={setSelectedDate}
                   />
                 )}
-              />+
+              />
+              +
             </Switch>
             {/* footer component */}
           </Router>
