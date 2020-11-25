@@ -8,12 +8,16 @@ import dailylog from '../../Images/dailylog.png';
 import shop from '../../Images/shop.png';
 import family from '../../Images/family.png';
 import cloud from '../../Images/cloud.png';
+import logo from '../../Images/medmelogo.png';
 
 const Home = () => {
   return (
     <div>
+      <div className="logo">
+        <img className="logo" src={logo} alt="logo" />
+      </div>
       <div>
-        <h1>Hello, Pablo</h1>
+        <h1 className="pagegreeting">Hello, Pablo!</h1>
       </div>
       <div className="mainimagecontainer">
         <img className="familyimage" src={family} />
@@ -21,30 +25,30 @@ const Home = () => {
       <div>
         <div className="medicinesrow">
           <Link className="mymedicines">
-            <div className="refillimage">
-              <img src={refills} alt="refills" />
+            <div className="refillimagecontainer">
+              <img className="refillimage" src={refills} alt="refills" />
             </div>
-            <h1>My Medicines</h1>
+            <h2>My Medicines</h2>
           </Link>
           <Link className="calendar">
-            <div className="calendarimage">
-              <img src={calendar} alt="calendar" />
+            <div className="calendarimagecontainer">
+              <img className="calendarimage" src={calendar} alt="calendar" />
             </div>
-            <h1>Calendar</h1>
+            <h2>Calendar</h2>
           </Link>
         </div>
         <div className="dailylogrow">
           <Link className="dailylog">
-            <div className="dailylogimage">
-              <img src={dailylog} alt="dailylog" />
+            <div className="dailylogimagecontainer">
+              <img className="dailylogimage" src={dailylog} alt="dailylog" />
             </div>
-            <h1>Daily Log</h1>
+            <h2>Daily Log</h2>
           </Link>
           <Link className="shop">
-            <div className="shopimage">
-              <img src={shop} alt="shop" />
+            <div className="shopimagecontainer">
+              <img className="shopimage" src={shop} alt="shop" />
             </div>
-            <h1>Shop</h1>
+            <h2>Shop</h2>
           </Link>
         </div>
       </div>
