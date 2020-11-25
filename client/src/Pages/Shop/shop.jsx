@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../../components/Search/Searchbar';
 import logo from '../../Images/logo.png';
-import Shop from '../../Images/Shop.png';
+import ShopImage from '../../Images/Shop.png';
 import allergy from '../../Images/allergy.png';
 import drugstore from '../../Images/drugstore.png';
 import firstAid from '../../Images/firstAid.png';
@@ -12,8 +12,13 @@ import personal from '../../Images/personal.png';
 import vitamin from '../../Images/vitamin.png';
 import './shop.css';
 import '../../components/Search/Searchbar.css';
+import { AppContext } from '../../context/AppContext';
 
-const shop = () => {
+const Shop = () => {
+  const { medicines, search } = useContext(AppContext);
+  const filteredMedicines = medicines.filter((medicine) => {
+    return medicine.toLowerCase().includes(search);
+  });
   return (
     <div>
       <div className="homelogo">
@@ -26,7 +31,7 @@ const shop = () => {
         <SearchBar />
       </div>
       <div className="mainimagecontainer">
-        <img className="familyimage" src={Shop} />
+        <img className="familyimage" src={ShopImage} />
       </div>
       <div>
         <div className="medicinesrow">
@@ -84,4 +89,4 @@ const shop = () => {
   );
 };
 
-export default shop;
+export default Shop;

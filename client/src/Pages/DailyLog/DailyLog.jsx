@@ -1,10 +1,10 @@
 import React from 'react';
 import './DailyLog.css';
-import Group from '../../images/Group.png';
-import MedMe from '../../images/MedMe.png';
-import Vector from '../../images/Vector.png';
-import Ellipse from '../../images/Ellipse.png';
-import Rectangle from '../../images/Rectangle.png';
+import Group from '../../Images/Group.png';
+import MedMe from '../../Images/MedMe.png';
+import Vector from '../../Images/Vector.png';
+import Ellipse from '../../Images/Ellipse.png';
+import Rectangle from '../../Images/Rectangle.png';
 import { Link } from 'react-router-dom';
 
 function DailyLog() {

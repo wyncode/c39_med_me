@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
 import './Home.css';
 import '../../Images/refills.png';
 import { Link } from 'react-router-dom';
 import refills from '../../Images/refills.png';
 import calendar from '../../Images/calendar.png';
 import dailylog from '../../Images/dailylog.png';
-import shop from '../../Images/shop.png';
+import shop from '../../Images/Shop.png';
 import family from '../../Images/family.png';
 import cloud from '../../Images/cloud.png';
 import logo from '../../Images/medmelogo.png';
 
 const Home = () => {
+  const { currentUser } = useContext(AppContext);
   return (
     <div>
       <div className="homelogo">
         <img className="homelogo" src={logo} alt="logo" />
       </div>
       <div>
-        <h1 className="pagegreeting">Hello, Pablo!</h1>
+        <h1 className="pagegreeting">Hello, {currentUser?.user.name}!</h1>
       </div>
       <div className="mainimagecontainer">
         <img className="familyimage" src={family} />
