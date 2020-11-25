@@ -5,6 +5,7 @@ import shop from './Pages/Shop/shop';
 import Home from './Pages/Home/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
+import DailyLog from './Pages/DailyLog/DailyLog';
 import Calendar from './Pages/calendar/';
 import moment from 'moment';
 
@@ -22,6 +23,7 @@ function App() {
               <PrivateRoute exact path="/" component={Home} />
               <Route exact path="/login" component={LogIn} />
               <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/dailylog" component={DailyLog} />
               <Route exact path="/" component={Home} />
               <Route
                 path="/calendar"
@@ -32,7 +34,7 @@ function App() {
                     onChange={setSelectedDate}
                   />
                 )}
-              />
+              />+
             </Switch>
             {/* footer component */}
           </Router>
