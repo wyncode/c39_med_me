@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../../components/Search/Searchbar';
-import MedMe from '../../Images/MedMe.png';
+import logo from '../../Images/logo.png';
 import Shop from '../../Images/Shop.png';
 import allergy from '../../Images/allergy.png';
 import drugstore from '../../Images/drugstore.png';
@@ -16,51 +16,68 @@ import '../../components/Search/Searchbar.css';
 const shop = () => {
   return (
     <div>
-      <div className="logo">
-        <img src={MedMe} alt="logo"></img>
+      <div className="homelogo">
+        <img className="homelogo" src={logo} alt="logo" />
       </div>
-      <div className="shopHead">
-        <h1 id="welcome">Hi,</h1>
-        <h2 id="shopTitle">Shop</h2>
+      <div>
+        <h1 className="pagegreeting">Let's Shop Pablo!</h1>
       </div>
       <div className="SearchContainer">
-        <SearchBar className="search" />
-        <img id="Shop" src={Shop} alt="onlineShop"></img>
+        <SearchBar />
       </div>
-      <div className="tilesrow">
-        <div className="tilescolumn">
-          <Link to="/">
-            <img src={pain} alt="pain"></img>
-            Pain & Fever
+      <div className="mainimagecontainer">
+        <img className="familyimage" src={Shop} />
+      </div>
+      <div>
+        <div className="medicinesrow">
+          <Link className="mymedicines">
+            <div className="refillimagecontainer">
+              <img className="refillimage" src={pain} alt="pain" />
+            </div>
+            <h2 className="hometext">Pain and Fever</h2>
           </Link>
-          <Link to="/">
-            <img src={allergy} alt="allergy"></img>
-            Allergies
+          <Link className="calendar">
+            <div className="calendarimagecontainer">
+              <img className="calendarimage" src={allergy} alt="allergy" />
+            </div>
+            <h2 className="hometext">Allergy</h2>
           </Link>
-          <Link to="/">
-            <img src={firstAid} alt="first aid"></img>
-            First Aid
-          </Link>
-        </div>
-        <div className="tilescolumn">
-          <Link to="/">
-            <img src={vitamin} alt="vitamins"></img>
-            Vitamins
-          </Link>
-          <Link to="/">
-            <img src={personal} alt="personal"></img>
-            Personal Care
-          </Link>
-          <Link to="/">
-            <img src={natural} alt="natural"></img>
-            Natural & Organic
+          <Link className="calendar" to="/">
+            <div className="calendarimagecontainer">
+              <img className="calendarimage" src={firstAid} alt="firstAid" />
+            </div>
+            <h2 className="hometext">First Aid</h2>
           </Link>
         </div>
       </div>
       <div>
-        <Link to="/">
-          <img className="Shop" src={drugstore} alt="drug store"></img>
-          Drug Store
+        <div className="dailylogrow">
+          <Link className="dailylog">
+            <div className="dailylogimagecontainer">
+              <img className="dailylogimage" src={vitamin} alt="vitamin" />
+            </div>
+            <h2 className="hometext">Vitamins</h2>
+          </Link>
+          <Link className="shop">
+            <div className="shopimagecontainer">
+              <img className="shopimage" src={personal} alt="personal" />
+            </div>
+            <h2 className="hometext">Personal Care</h2>
+          </Link>
+          <Link className="shop">
+            <div className="shopimagecontainer">
+              <img className="shopimage" src={natural} alt="natural" />
+            </div>
+            <h2 className="hometext">Natural Remedies</h2>
+          </Link>
+        </div>
+      </div>
+      <div>
+        <Link className="store">
+          <div className="storeimagecontainer">
+            <img className="storeimage" src={drugstore} alt="drugstore" />
+          </div>
+          <h2 className="seemoretext">See More</h2>
         </Link>
       </div>
     </div>
