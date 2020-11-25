@@ -6,13 +6,12 @@ img {
   width: 75px;
 }
 
-h2 {
+.hometext {
   font-size: 18px;
-  font-weight: bold;
   text-align: center;
 }
 
-.logo {
+.homelogo {
   display: flex;
   justify-content: left;
   width: 100px;
@@ -32,9 +31,71 @@ h2 {
 }
 
 .familyimage {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   height: 250px;
-  width: 275px;
+  width: 325px;
   padding: 15px;
+}
+
+.mainimagecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 300px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.mymedicines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  height: 150px;
+  width: 150px;
+  color: #253965;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  height: 150px;
+  width: 150px;
+  color: #253965;
+}
+
+.dailylog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  height: 150px;
+  width: 150px;
+  color: #253965;
+}
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  height: 150px;
+  width: 150px;
+  color: #253965;
 }
 
 .refillimagecontainer {
@@ -46,6 +107,7 @@ h2 {
   height: 150px;
   width: 150px;
   border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .refillimage {
@@ -63,6 +125,7 @@ h2 {
   height: 150px;
   width: 150px;
   border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .dailylogimagecontainer {
@@ -74,6 +137,7 @@ h2 {
   height: 150px;
   width: 150px;
   border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .shopimagecontainer {
@@ -85,27 +149,19 @@ h2 {
   height: 150px;
   width: 150px;
   border-radius: 15px;
-}
-
-a:link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 150px;
-  height: 150px;
-  width: 150px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .medicinesrow {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 325px;
 }
 
 .dailylogrow {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 325px;
 }
