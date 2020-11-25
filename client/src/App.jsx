@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import LogIn from './Pages/SignIn/LogIn';
 import SignUp from './Pages/SignUp/SignUp';
-import Home from './Pages/Home/';
+import shop from './Pages/Shop/shop';
+import Home from './Pages/Home/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { AppContextProvider } from './context/AppContext';
 import Calendar from './Pages/calendar/';
@@ -17,6 +18,7 @@ function App() {
         <AppContextProvider>
           <Router>
             <Switch>
+              <Route exact path="/shop" component={shop} />
               <PrivateRoute exact path="/" component={Home} />
               <Route exact path="/login" component={LogIn} />
               <Route exact path="/signup" component={SignUp} />
