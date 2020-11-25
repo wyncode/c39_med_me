@@ -7,6 +7,7 @@ import { AppContextProvider } from './context/AppContext';
 import Calendar from './Pages/calendar/';
 import moment from 'moment';
 
+
 function App() {
   const [selectedDate, setSelectedDate] = useState(moment());
 
@@ -16,6 +17,7 @@ function App() {
         <AppContextProvider>
           <Router>
             <Switch>
+              <PrivateRoute exact path="/" component={Home} />
               <Route exact path="/login" component={LogIn} />
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/" component={Home} />
@@ -30,6 +32,7 @@ function App() {
                 )}
               />
             </Switch>
+            {/* footer component */}
           </Router>
         </AppContextProvider>
       </h1>
