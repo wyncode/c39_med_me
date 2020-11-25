@@ -6,7 +6,7 @@ const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
-  //   const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('');
   //   const [currentFilter, setCurrentFilter] = useState(null);
   const [loading, setLoading] = useState(false);
   const user = sessionStorage.getItem('user');
@@ -30,11 +30,11 @@ const AppContextProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         currentUser,
-        setCurrentUser
+        setCurrentUser,
         // loading,
         // setLoading,
-        // search,
-        // setSearch,
+        search,
+        setSearch
         // currentFilter,
         // setCurrentFilter
       }}
