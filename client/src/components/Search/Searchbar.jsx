@@ -14,7 +14,7 @@ const Search = () => {
         onChange={handleSearch}
         type="text"
         placeholder="Search Medicines"
-        className="Search"
+        className="search"
       />
     </div>
   );

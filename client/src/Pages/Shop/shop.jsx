@@ -15,6 +15,7 @@ import '../../components/Search/Searchbar.css';
 import { AppContext } from '../../context/AppContext';
 
 const Shop = () => {
+  const { currentUser } = useContext(AppContext);
   const { medicines, search } = useContext(AppContext);
   const filteredMedicines = medicines.filter((medicine) => {
     return medicine.toLowerCase().includes(search);
@@ -25,55 +26,51 @@ const Shop = () => {
         <img className="homelogo" src={logo} alt="logo" />
       </div>
       <div>
-        <h1 className="pagegreeting">Let's Shop Pablo!</h1>
+        <h1 className="pagegreeting">Let's Shop {currentUser?.user.name}</h1>
       </div>
-      <div className="SearchContainer">
+      <div className="searchContainer">
         <SearchBar />
       </div>
       <div className="mainimagecontainer">
-        <img className="familyimage" src={ShopImage} />
+        <img className="familyimage" src={ShopImage} alt="onlineShop" />
       </div>
       <div>
-        <div className="medicinesrow">
-          <Link className="mymedicines">
-            <div className="refillimagecontainer">
-              <img className="refillimage" src={pain} alt="pain" />
+        <div>
+          <Link to="/pain">
+            <div className="drugimagecontainer">
+              <img className="livepix" src={pain} alt="pain" />
             </div>
-            <h2 className="hometext">Pain and Fever</h2>
+            <h2 className="shoptext">Pain and Fever</h2>
           </Link>
-          <Link className="calendar">
-            <div className="calendarimagecontainer">
-              <img className="calendarimage" src={allergy} alt="allergy" />
+          <Link>
+            <div className="drugimagecontainer">
+              <img className="livepix" src={allergy} alt="allergy" />
             </div>
-            <h2 className="hometext">Allergy</h2>
+            <h2 className="shoptext">Allergy</h2>
           </Link>
-          <Link className="calendar" to="/">
-            <div className="calendarimagecontainer">
-              <img className="calendarimage" src={firstAid} alt="firstAid" />
+          <Link to="/firstaid">
+            <div className="drugimagecontainer">
+              <img className="livepix" src={firstAid} alt="firstAid" />
             </div>
-            <h2 className="hometext">First Aid</h2>
+            <h2 className="shoptext">First Aid</h2>
           </Link>
-        </div>
-      </div>
-      <div>
-        <div className="dailylogrow">
-          <Link className="dailylog">
-            <div className="dailylogimagecontainer">
-              <img className="dailylogimage" src={vitamin} alt="vitamin" />
+          <Link to="/vitamins">
+            <div className="drugimagecontainer">
+              <img className="livepix" src={vitamin} alt="vitamin" />
             </div>
-            <h2 className="hometext">Vitamins</h2>
+            <h2 className="shoptext">Vitamins</h2>
           </Link>
-          <Link className="shop">
-            <div className="shopimagecontainer">
-              <img className="shopimage" src={personal} alt="personal" />
+          <Link to="/personal">
+            <div className="drugimagecontainer">
+              <img className="livepix" src={personal} alt="personal" />
             </div>
-            <h2 className="hometext">Personal Care</h2>
+            <h2 className="shoptext">Personal Care</h2>
           </Link>
-          <Link className="shop">
-            <div className="shopimagecontainer">
-              <img className="shopimage" src={natural} alt="natural" />
+          <Link to="/natural">
+            <div className="drugimagecontainer">
+              <img className="livepix" src={natural} alt="natural" />
             </div>
-            <h2 className="hometext">Natural Remedies</h2>
+            <h2 className="shoptext">Natural Remedies</h2>
           </Link>
         </div>
       </div>
