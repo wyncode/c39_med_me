@@ -1,4 +1,5 @@
 const Order = require('../db/models/order');
+const User = require('../db/models/user');
 
 const getOrder = async (req, res) => {
   const { id } = req.params;
@@ -29,11 +30,13 @@ const createOrder = async (req, res) => {
   try {
     const order = new Order(req.body);
     order.owner = req.user._id;
-    req.body.medicine.forEach((medicineId) => {
-      order.prescriptions.push(medicineId);
+    const user = await User.findById({ _id: req.user._id });
+    req.body.prescriptions.forEach((medicineId) => {
+      user.medicineCabinet.push(medicineId);
     });
 
     await order.save();
+    await user.save();
     res.status(200).json(order);
   } catch (error) {
     res.status(400).json({ error: error.message });
