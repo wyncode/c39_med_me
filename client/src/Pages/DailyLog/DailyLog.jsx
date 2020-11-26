@@ -20,7 +20,7 @@ function DailyLog() {
         <img src={Vector} alt="" className="vector" />
       </Link>
       <div className="form">
-        <div className="dailylog">
+        <div className="dailylogpage">
           <h1>Daily log</h1>
           <h2>Tell us how you are feeling today.</h2>
         </div>

@@ -48,7 +48,7 @@
   padding-bottom: 5px;
 }
 
-.shop {
+.shopnav {
   height: 46px;
   width: 46px;
   font-size: 16px;
@@ -59,7 +59,7 @@
   color: white;
 }
 
-.shopimage {
+.shopimagenav {
   display: flex;
   justify-content: space-around;
   align-content: center;
