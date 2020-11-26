@@ -9,38 +9,37 @@ import { AppContextProvider } from './context/AppContext';
 import DailyLog from './Pages/DailyLog/DailyLog';
 import Calendar from './Pages/calendar/';
 import moment from 'moment';
+import Navigation from './components/Navigation/Navigation.jsx';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(moment());
 
   return (
     <div>
-      <h1>
-        <AppContextProvider>
-          <Router>
-            <Switch>
-              <Route exact path="/shop" component={shop} />
-              <PrivateRoute exact path="/" component={Home} />
-              <Route exact path="/login" component={LogIn} />
-              <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/dailylog" component={DailyLog} />
-              <Route exact path="/" component={Home} />
-              <Route
-                path="/calendar"
-                render={(props) => (
-                  <Calendar
-                    {...props}
-                    value={selectedDate}
-                    onChange={setSelectedDate}
-                  />
-                )}
-              />
-              +
-            </Switch>
-            {/* footer component */}
-          </Router>
-        </AppContextProvider>
-      </h1>
+      <AppContextProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/shop" component={shop} />
+            <PrivateRoute exact path="/home" component={Home} />
+            <Route exact path="/login" component={LogIn} />
+            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/dailylog" component={DailyLog} />
+            <Route exact path="/" component={Home} />
+            <Route
+              path="/calendar"
+              render={(props) => (
+                <Calendar
+                  {...props}
+                  value={selectedDate}
+                  onChange={setSelectedDate}
+                />
+              )}
+            />
+            +
+          </Switch>
+          <Navigation />
+        </Router>
+      </AppContextProvider>
     </div>
   );
 }
