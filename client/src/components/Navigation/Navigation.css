@@ -1,0 +1,90 @@
+.navigationcontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 395px;
+  height: 81px;
+  background-color: #537edc;
+  bottom: 0;
+}
+
+.home {
+  height: 46px;
+  width: 46px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.homeimage {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 30px;
+  width: 30px;
+  padding-bottom: 5px;
+}
+
+.mymeds {
+  height: 46px;
+  width: 46px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.profileimage {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 30px;
+  width: 30px;
+  padding-bottom: 5px;
+}
+
+.shop {
+  height: 46px;
+  width: 46px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.shopimage {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 30px;
+  width: 30px;
+  padding-bottom: 5px;
+}
+
+.chat {
+  height: 46px;
+  width: 46px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.chatimage {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 30px;
+  width: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
