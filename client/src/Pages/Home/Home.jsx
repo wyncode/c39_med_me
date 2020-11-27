@@ -13,13 +13,14 @@ import logo from '../../Images/medmelogo.png';
 
 const Home = () => {
   const { currentUser } = useContext(AppContext);
+
   return (
     <div>
       <div className="homelogo">
         <img className="homelogo" src={logo} alt="logo" />
       </div>
       <div>
-        <h1 className="pagegreeting">Hello, {currentUser?.user.name}!</h1>
+        <h1 className="pagegreeting">Hello, {currentUser?.name}!</h1>
       </div>
       <div className="mainimagecontainer">
         <img className="familyimage" src={family} />
