@@ -23,8 +23,8 @@ const Navigation = () => {
           </div>
         </Link>
         <Link to="/shop">
-          <div className="shop">
-            <img src={shop} className="shopimage" alt="shop" />
+          <div className="shopnav">
+            <img src={shop} className="shopimagenav" alt="shop" />
             Shop
           </div>
         </Link>
