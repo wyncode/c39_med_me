@@ -23,7 +23,7 @@ export default function CalendarHeader({ value, onChange }) {
 
   return (
     <div className="header">
-      <div
+      {/* <div
         className="previous"
         onClick={() => !thisMonth() && onChange(prevMonth())}
       >
@@ -34,7 +34,7 @@ export default function CalendarHeader({ value, onChange }) {
       </div>
       <div className="next" onClick={() => onChange(nextMonth())}>
         {String.fromCharCode(187)}
-      </div>
+      </div> */}
     </div>
   );
 }

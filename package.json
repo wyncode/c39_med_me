@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
+    "@stripe/stripe-js": "^1.11.0",
     "axios": "^0.21.0",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.23.0",
@@ -20,6 +21,7 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "react-bootstrap": "^1.4.0",
+    "use-shopping-cart": "^2.2.0",
     "validator": "^13.1.17"
   },
   "devDependencies": {

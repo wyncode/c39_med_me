@@ -17,20 +17,29 @@ import { AppContext } from '../../context/AppContext';
 const Shop = () => {
   const { currentUser } = useContext(AppContext);
   const { medicines, search } = useContext(AppContext);
-  const filteredMedicines = medicines.filter((medicine) => {
-    return medicine.toLowerCase().includes(search);
-  });
+  const [isActive, setisActive] = useState(false);
+
+  const filteredMedicines =
+    medicines &&
+    medicines?.filter((medicine) => {
+      return medicine.name.toLowerCase().includes(search);
+    });
+
   return (
     <div>
       <div className="homelogo">
         <img className="homelogo" src={logo} alt="logo" />
       </div>
       <div>
-        <h1 className="pagegreeting">Let's Shop {currentUser?.user.name}</h1>
+        <h1 className="pagegreeting">Let's Shop {currentUser?.name}</h1>
       </div>
       <div className="searchContainer">
         <SearchBar />
       </div>
+      {search &&
+        filteredMedicines.map((med) => {
+          return <div>{med.name}</div>;
+        })}
       <div className="mainimagecontainer">
         <img className="familyimage" src={ShopImage} alt="onlineShop" />
       </div>

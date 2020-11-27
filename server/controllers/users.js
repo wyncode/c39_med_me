@@ -27,6 +27,7 @@ const getCurrentUser = async (req, res) => {
       }
     })
     .execPopulate();
+  console.log(req.user);
   res.json({ user: req.user, orders: req.user.orders });
 };
 
@@ -74,6 +75,7 @@ const loginUser = async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findByCredentials(email, password);
+    console.log(user);
     const token = await user.generateAuthToken();
     res.cookie('jwt', token, {
       httpOnly: true,

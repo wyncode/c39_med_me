@@ -26,7 +26,7 @@ const AppContextProvider = ({ children }) => {
         });
     }
   }, [currentUser, user]);
-
+  console.log(currentUser);
   return (
     <AppContext.Provider
       value={{
