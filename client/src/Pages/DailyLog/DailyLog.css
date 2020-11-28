@@ -2,26 +2,30 @@
 
 .container {
   position: absolute;
-  width: 414px;
-  height: 1777px;
+  top: 0px;
+  left: 0px;
+  width: 375px;
+  height: 1397px;
   background: #537edc;
-  border: px solid grey;
 }
 .form {
   position: absolute;
   left: -0.24%;
   right: 0%;
-  top: 387px;
-  bottom: -1%;
-  background: #ffff;
+  top: 345px;
+  width: 375px;
+  height: 1469px;
   border-radius: 10px;
+  background: white;
   border: 2px solid grey;
 }
 .lady {
   position: absolute;
-  left: 14%;
-  top: 4.78%;
+  left: 49px;
+  top: 60px;
   bottom: 78.63%;
+  width: 274px;
+  height: 294.8px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .logo {
@@ -52,7 +56,7 @@
   flex-direction: row;
   justify-content: left;
   position: absolute;
-  left: 48px;
+  left: 24px;
   top: 33px;
   width: 323px;
   height: 58px;
@@ -94,7 +98,7 @@
 }
 .symptoms {
   position: absolute;
-  left: 48px;
+  left: 33px;
   top: 159px;
   width: 323px;
   height: 668px;
@@ -118,7 +122,7 @@
   font-size: 14px;
   line-height: 16px;
   padding-right: 28px;
-  color: #5b5b5b;
+  color: #7b7b7b;
 }
 .pain {
   position: absolute;
@@ -158,6 +162,10 @@
   font-size: 24px;
   line-height: 28px;
   color: #ffffff;
+}
+.textzone {
+  position: absolute;
+  left: 28px;
 }
 .textzone h2 {
   position: absolute;
@@ -215,6 +223,10 @@
   height: 24px;
   width: 24px;
 }
+.feedback .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .feedback h2 {
   font-family: Roboto;
   font-style: normal;
@@ -249,6 +261,10 @@
   padding-top: 10px;
   height: 24px;
   width: 24px;
+}
+.drowsiness .rectangleclicky {
+  width: 152px;
+  height: 44px;
 }
 .drowsiness h2 {
   font-family: Roboto;
@@ -285,6 +301,10 @@
   height: 24px;
   width: 24px;
 }
+.fatigue .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .fatigue h2 {
   font-family: Roboto;
   font-style: normal;
@@ -319,6 +339,10 @@
   padding-top: 10px;
   height: 24px;
   width: 24px;
+}
+.heart .rectangleclicky {
+  width: 152px;
+  height: 44px;
 }
 .heart h2 {
   font-family: Roboto;
@@ -355,6 +379,10 @@
   height: 24px;
   width: 24px;
 }
+.hives .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .hives h2 {
   font-family: Roboto;
   font-style: normal;
@@ -389,6 +417,10 @@
   padding-top: 10px;
   height: 24px;
   width: 24px;
+}
+.rash .rectangleclicky {
+  width: 152px;
+  height: 44px;
 }
 .rash h2 {
   font-family: Roboto;
@@ -425,6 +457,10 @@
   height: 24px;
   width: 24px;
 }
+.nausea .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .nausea h2 {
   font-family: Roboto;
   font-style: normal;
@@ -460,6 +496,10 @@
   height: 24px;
   width: 24px;
 }
+.vomiting .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .vomiting h2 {
   font-family: Roboto;
   font-style: normal;
@@ -494,6 +534,10 @@
   padding-top: 10px;
   height: 24px;
   width: 24px;
+}
+.stomach .rectangleclicky {
+  width: 152px;
+  height: 44px;
 }
 .stomach h2 {
   font-family: Roboto;
