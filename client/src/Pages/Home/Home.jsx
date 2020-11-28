@@ -26,32 +26,32 @@ const Home = () => {
         </div>
         <div>
           <div className="medicinesrow">
-            <Link className="mymedicines">
-              <div className="refillimagecontainer">
+            <div className="mymedicines">
+              <Link className="refillimagecontainer">
                 <img className="refillimage" src={refills} alt="refills" />
-              </div>
-              <h2 className="hometext">My Medicines</h2>
-            </Link>
-            <Link className="calendar">
-              <div className="calendarimagecontainer">
+              </Link>
+              <Link className="hometext">My Medicines</Link>
+            </div>
+            <div className="calendar">
+              <Link className="calendarimagecontainer">
                 <img className="calendarimage" src={calendar} alt="calendar" />
-              </div>
-              <h2 className="hometext">Calendar</h2>
-            </Link>
+              </Link>
+              <Link className="hometext">Calendar</Link>
+            </div>
           </div>
           <div className="dailylogrow">
-            <Link className="dailylog">
-              <div className="dailylogimagecontainer">
+            <div className="dailylog">
+              <Link className="dailylogimagecontainer">
                 <img className="dailylogimage" src={dailylog} alt="dailylog" />
-              </div>
-              <h2 className="hometext">Daily Log</h2>
-            </Link>
-            <Link className="shop">
-              <div className="shopimagecontainer">
+              </Link>
+              <Link className="hometext">Daily Log</Link>
+            </div>
+            <div className="shop">
+              <Link className="shopimagecontainer">
                 <img className="shopimage" src={shop} alt="shop" />
-              </div>
-              <h2 className="hometext">Shop</h2>
-            </Link>
+              </Link>
+              <Link className="hometext">Shop</Link>
+            </div>
           </div>
         </div>
       </div>
