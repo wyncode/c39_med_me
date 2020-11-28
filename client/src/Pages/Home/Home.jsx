@@ -12,6 +12,7 @@ import logo from '../../Images/medmelogo.png';
 
 const Home = () => {
   const { currentUser } = useContext(AppContext);
+
   return (
     <div className="fullview">
       <div className="homecontainer">
