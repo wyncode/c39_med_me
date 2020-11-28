@@ -2,18 +2,21 @@
 
 .container {
   position: absolute;
-  width: 414px;
-  height: 1397;
-  background: grey;
-  border: px solid grey;
+  top: 0px;
+  left: 0px;
+  width: 416px;
+  height: 1397px;
+  background: #537edc;
 }
 .form {
   position: absolute;
   left: -0.24%;
   right: 0%;
   top: 387px;
-  bottom: -1%;
+  width: 414px;
+  height: 1469px;
   border-radius: 10px;
+  background: white;
   border: 2px solid grey;
 }
 .lady {
@@ -216,6 +219,10 @@
   height: 24px;
   width: 24px;
 }
+.feedback .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .feedback h2 {
   font-family: Roboto;
   font-style: normal;
@@ -250,6 +257,10 @@
   padding-top: 10px;
   height: 24px;
   width: 24px;
+}
+.drowsiness .rectangleclicky {
+  width: 152px;
+  height: 44px;
 }
 .drowsiness h2 {
   font-family: Roboto;
@@ -286,6 +297,10 @@
   height: 24px;
   width: 24px;
 }
+.fatigue .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .fatigue h2 {
   font-family: Roboto;
   font-style: normal;
@@ -320,6 +335,10 @@
   padding-top: 10px;
   height: 24px;
   width: 24px;
+}
+.heart .rectangleclicky {
+  width: 152px;
+  height: 44px;
 }
 .heart h2 {
   font-family: Roboto;
@@ -356,6 +375,10 @@
   height: 24px;
   width: 24px;
 }
+.hives .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .hives h2 {
   font-family: Roboto;
   font-style: normal;
@@ -390,6 +413,10 @@
   padding-top: 10px;
   height: 24px;
   width: 24px;
+}
+.rash .rectangleclicky {
+  width: 152px;
+  height: 44px;
 }
 .rash h2 {
   font-family: Roboto;
@@ -426,6 +453,10 @@
   height: 24px;
   width: 24px;
 }
+.nausea .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .nausea h2 {
   font-family: Roboto;
   font-style: normal;
@@ -461,6 +492,10 @@
   height: 24px;
   width: 24px;
 }
+.vomiting .rectangleclicky {
+  width: 152px;
+  height: 44px;
+}
 .vomiting h2 {
   font-family: Roboto;
   font-style: normal;
@@ -495,6 +530,10 @@
   padding-top: 10px;
   height: 24px;
   width: 24px;
+}
+.stomach .rectangleclicky {
+  width: 152px;
+  height: 44px;
 }
 .stomach h2 {
   font-family: Roboto;
