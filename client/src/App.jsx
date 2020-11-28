@@ -41,7 +41,8 @@ function App() {
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dailylog" component={DailyLog} />
           <Route exact path="/" component={Home} />
-          <Route
+          <PrivateRoute
+            exact
             path="/calendar"
             render={(props) => (
               <Calendar

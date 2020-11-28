@@ -35,24 +35,30 @@ const Home = () => {
               <Link className="hometext">My Medicines</Link>
             </div>
             <div className="calendar">
-              <Link className="calendarimagecontainer">
+              <Link to="/calendar" className="calendarimagecontainer">
                 <img className="calendarimage" src={calendar} alt="calendar" />
               </Link>
-              <Link className="hometext">Calendar</Link>
+              <Link to="/calendar" className="hometext">
+                Calendar
+              </Link>
             </div>
           </div>
           <div className="dailylogrow">
             <div className="dailylog">
-              <Link className="dailylogimagecontainer">
+              <Link to="/dailylog" className="dailylogimagecontainer">
                 <img className="dailylogimage" src={dailylog} alt="dailylog" />
               </Link>
-              <Link className="hometext">Daily Log</Link>
+              <Link to="/dailylog" className="hometext">
+                Daily Log
+              </Link>
             </div>
             <div className="shop">
-              <Link className="shopimagecontainer">
+              <Link to="/shop" className="shopimagecontainer">
                 <img className="shopimage" src={shop} alt="shop" />
               </Link>
-              <Link className="hometext">Shop</Link>
+              <Link to="/shop" className="hometext">
+                Shop
+              </Link>
             </div>
           </div>
         </div>
