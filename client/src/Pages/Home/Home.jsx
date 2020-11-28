@@ -9,6 +9,7 @@ import dailylog from '../../Images/dailylog.png';
 import shop from '../../Images/Shop.png';
 import family from '../../Images/family.png';
 import logo from '../../Images/medmelogo.png';
+import Navigation from '../../components/Navigation/Navigation';
 
 const Home = () => {
   const { currentUser } = useContext(AppContext);
@@ -56,6 +57,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Navigation />
     </div>
   );
 };
