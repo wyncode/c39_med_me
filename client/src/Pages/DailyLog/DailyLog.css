@@ -4,7 +4,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 416px;
+  width: 375px;
   height: 1397px;
   background: #537edc;
 }
@@ -12,8 +12,8 @@
   position: absolute;
   left: -0.24%;
   right: 0%;
-  top: 387px;
-  width: 414px;
+  top: 345px;
+  width: 375px;
   height: 1469px;
   border-radius: 10px;
   background: white;
@@ -21,8 +21,8 @@
 }
 .lady {
   position: absolute;
-  left: 70px;
-  top: 99px;
+  left: 49px;
+  top: 60px;
   bottom: 78.63%;
   width: 274px;
   height: 294.8px;
@@ -56,7 +56,7 @@
   flex-direction: row;
   justify-content: left;
   position: absolute;
-  left: 48px;
+  left: 24px;
   top: 33px;
   width: 323px;
   height: 58px;
@@ -98,7 +98,7 @@
 }
 .symptoms {
   position: absolute;
-  left: 48px;
+  left: 33px;
   top: 159px;
   width: 323px;
   height: 668px;
@@ -162,6 +162,10 @@
   font-size: 24px;
   line-height: 28px;
   color: #ffffff;
+}
+.textzone {
+  position: absolute;
+  left: 28px;
 }
 .textzone h2 {
   position: absolute;
