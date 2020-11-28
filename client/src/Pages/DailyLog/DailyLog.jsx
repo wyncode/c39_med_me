@@ -2,7 +2,6 @@ import React from 'react';
 import './DailyLog.css';
 import Group from '../../Images/Group.png';
 import MedMe from '../../Images/MedMe.png';
-import Vector from '../../Images/Vector.png';
 import Ellipse from '../../Images/Ellipse.png';
 import Rectangle from '../../Images/Rectangle.png';
 import { Link } from 'react-router-dom';
@@ -15,9 +14,6 @@ function DailyLog() {
       </div>
       <Link to="">
         <img src={MedMe} alt="" className="logo" />
-      </Link>
-      <Link to="">
-        <img src={Vector} alt="" className="vector" />
       </Link>
       <div className="form">
         <div className="dailylogpage">

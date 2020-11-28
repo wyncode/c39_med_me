@@ -53,7 +53,6 @@ function App() {
           />
           +
         </Switch>
-        <Navigation />
       </Router>
     </div>
   );
