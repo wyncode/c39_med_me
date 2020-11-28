@@ -11,6 +11,7 @@ img {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 10px;
+  color: #253965;
 }
 
 .homecontainer {
@@ -18,7 +19,6 @@ img {
   flex-direction: column;
   align-items: center;
   padding-left: 20px;
-  padding-bottom: 40px;
 }
 
 .homelogo {
@@ -57,7 +57,7 @@ img {
   width: 375px;
   padding-right: 5px;
   padding-left: 5px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .mymedicines {

@@ -11,7 +11,7 @@ import Calendar from './Pages/calendar/';
 import moment from 'moment';
 import Navigation from './components/Navigation/Navigation.jsx';
 import './App.css';
-import Cart from './Pages/ShoppingCart/cart';
+import Cart from './Pages/ShoppingCart/Cart';
 import axios from 'axios';
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
         <Switch>
           <PrivateRoute exact path="/home" component={Home} />
           <PrivateRoute exact path="/shop" component={Shop} />
-          <PrivateRoute exact path="/cart" conponent={Cart} />
+          <PrivateRoute exact path="/cart" component={Cart} />
           <Route exact path="/login" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dailylog" component={DailyLog} />
@@ -53,7 +53,6 @@ function App() {
           />
           +
         </Switch>
-        <Navigation />
       </Router>
     </div>
   );

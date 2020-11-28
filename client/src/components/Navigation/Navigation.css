@@ -1,3 +1,9 @@
+.fullpagecontainer {
+  position: fixed;
+  z-index: 50px;
+  bottom: 0;
+}
+
 .navigationcontainer {
   display: flex;
   justify-content: space-around;
@@ -17,6 +23,7 @@
   justify-content: center;
   align-items: center;
   color: white;
+  padding-left: 20px;
 }
 
 .homeimage {
