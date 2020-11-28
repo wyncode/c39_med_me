@@ -21,7 +21,7 @@ const Home = () => {
           <img className="homelogo" src={logo} alt="logo" />
         </div>
         <div>
-          <h1 className="pagegreeting">Hello, {currentUser?.user.name}!</h1>
+          <h1 className="pagegreeting">Hello, {currentUser?.name}!</h1>
         </div>
         <div className="mainimagecontainer">
           <img className="familyimage" src={family} />
@@ -34,7 +34,7 @@ const Home = () => {
               </Link>
               <Link className="hometext">My Medicines</Link>
             </div>
-            <div className="calendar">
+            <div className="calendarhome">
               <Link to="/calendar" className="calendarimagecontainer">
                 <img className="calendarimage" src={calendar} alt="calendar" />
               </Link>
