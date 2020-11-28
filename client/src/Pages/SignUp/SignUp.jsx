@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { AppContext } from '../../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
+import logo from '../../Images/logo.png';
 
 const SignUp = ({ history }) => {
   const { setCurrentUser } = useContext(AppContext);
@@ -27,13 +28,14 @@ const SignUp = ({ history }) => {
   return (
     <div className="fullview">
       <form className="formcontainer" onSubmit={handleSignUp}>
+        <div className="signuplogocontainer">
+          <img className="loginlogoimage" src={logo} alt="logo" />
+        </div>
         <div className="menucontainer">
-          <h1>
-            <Link to="/login" className="signin">
-              Sign In
-            </Link>
-            <div className="signupblue">Sign Up</div>
-          </h1>
+          <Link to="/login" className="signin">
+            Sign In
+          </Link>
+          <div className="signupblue">Sign Up</div>
         </div>
         <div className="datacontainer">
           <h2>Name</h2>
