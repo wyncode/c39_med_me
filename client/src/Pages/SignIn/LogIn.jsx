@@ -31,14 +31,12 @@ const LogIn = ({ history }) => {
       <div className="fullview">
         <form className="signincontainer" onSubmit={handleLogin}>
           <div className="menucontainer">
-            <h1>
               <div className="signinblue">Sign In</div>
               <div className="signupbuttoncontainer">
                 <Link to="/signup" className="signup">
                   Sign Up
                 </Link>
               </div>
-            </h1>
           </div>
           <div className="dataformcontainer">
             <h2>Email</h2>
