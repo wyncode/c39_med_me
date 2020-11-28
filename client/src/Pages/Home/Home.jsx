@@ -8,51 +8,52 @@ import calendar from '../../Images/calendar.png';
 import dailylog from '../../Images/dailylog.png';
 import shop from '../../Images/Shop.png';
 import family from '../../Images/family.png';
-import cloud from '../../Images/cloud.png';
 import logo from '../../Images/medmelogo.png';
 
 const Home = () => {
   const { currentUser } = useContext(AppContext);
 
   return (
-    <div>
-      <div className="homelogo">
-        <img className="homelogo" src={logo} alt="logo" />
-      </div>
-      <div>
-        <h1 className="pagegreeting">Hello, {currentUser?.name}!</h1>
-      </div>
-      <div className="mainimagecontainer">
-        <img className="familyimage" src={family} />
-      </div>
-      <div>
-        <div className="medicinesrow">
-          <Link className="mymedicines">
-            <div className="refillimagecontainer">
-              <img className="refillimage" src={refills} alt="refills" />
-            </div>
-            <h2 className="hometext">My Medicines</h2>
-          </Link>
-          <Link className="calendar">
-            <div className="calendarimagecontainer">
-              <img className="calendarimage" src={calendar} alt="calendar" />
-            </div>
-            <h2 className="hometext">Calendar</h2>
-          </Link>
+    <div className="fullview">
+      <div className="homecontainer">
+        <div className="homelogo">
+          <img className="homelogo" src={logo} alt="logo" />
         </div>
-        <div className="dailylogrow">
-          <Link className="dailylog">
-            <div className="dailylogimagecontainer">
-              <img className="dailylogimage" src={dailylog} alt="dailylog" />
+        <div>
+          <h1 className="pagegreeting">Hello, {currentUser?.user.name}!</h1>
+        </div>
+        <div className="mainimagecontainer">
+          <img className="familyimage" src={family} />
+        </div>
+        <div>
+          <div className="medicinesrow">
+            <div className="mymedicines">
+              <Link className="refillimagecontainer">
+                <img className="refillimage" src={refills} alt="refills" />
+              </Link>
+              <Link className="hometext">My Medicines</Link>
             </div>
-            <h2 className="hometext">Daily Log</h2>
-          </Link>
-          <Link className="shop">
-            <div className="shopimagecontainer">
-              <img className="shopimage" src={shop} alt="shop" />
+            <div className="calendar">
+              <Link className="calendarimagecontainer">
+                <img className="calendarimage" src={calendar} alt="calendar" />
+              </Link>
+              <Link className="hometext">Calendar</Link>
             </div>
-            <h2 className="hometext">Shop</h2>
-          </Link>
+          </div>
+          <div className="dailylogrow">
+            <div className="dailylog">
+              <Link className="dailylogimagecontainer">
+                <img className="dailylogimage" src={dailylog} alt="dailylog" />
+              </Link>
+              <Link className="hometext">Daily Log</Link>
+            </div>
+            <div className="shop">
+              <Link className="shopimagecontainer">
+                <img className="shopimage" src={shop} alt="shop" />
+              </Link>
+              <Link className="hometext">Shop</Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

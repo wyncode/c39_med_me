@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import LogIn from './Pages/SignIn/LogIn';
 import SignUp from './Pages/SignUp/SignUp';
-import Shop from './Pages/Shop/Shop';
+import Shop from './Pages/Shop/Shop.jsx';
 import Home from './Pages/Home/Home';
 import PrivateRoute from './components/PrivateRoute';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -10,6 +10,7 @@ import DailyLog from './Pages/DailyLog/DailyLog';
 import Calendar from './Pages/calendar/';
 import moment from 'moment';
 import Navigation from './components/Navigation/Navigation.jsx';
+import './App.css';
 import Cart from './Pages/ShoppingCart/cart';
 import axios from 'axios';
 
