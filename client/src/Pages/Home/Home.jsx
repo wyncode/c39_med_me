@@ -20,7 +20,7 @@ const Home = () => {
         <div className="homelogo">
           <img className="homelogo" src={logo} alt="logo" />
         </div>
-        <div>
+        <div className="pagegreetingcontainer">
           <h1 className="pagegreeting">Hello, {currentUser?.name}!</h1>
         </div>
         <div className="mainimagecontainer">

@@ -1,0 +1,182 @@
+.fullcart {
+  width: 375px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.carttext {
+  padding-top: 35px;
+  padding-left: 27px;
+  color: #253965;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.pleasemakesure {
+  padding-top: 25px;
+  font-size: 14px;
+  color: lightgray;
+}
+
+.itemcontainer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.tylenolcontainer {
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  background: #537edc;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.tylenolbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.tylenollabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  color: white;
+  font-size: 18px;
+}
+
+.motrincontainer {
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  background: #537edc;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.motrinbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.motrinlabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  color: white;
+  font-size: 18px;
+}
+
+.alevecontainer {
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  background: #537edc;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.alevebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.alevelabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  color: white;
+  font-size: 18px;
+}
+
+.totalamountcontainer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  display: flex;
+  font-size: 20px;
+}
+
+.checkoutbutton {
+  padding-left: 25px;
+}
+
+.incrementbutton {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 30px;
+  width: 30px;
+  background-color: #537edc;
+  color: white;
+  border: none;
+  font-size: 24px;
+}
+
+.decrementbutton {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 30px;
+  width: 30px;
+  background-color: #537edc;
+  color: white;
+  border: none;
+  font-size: 24px;
+}
+
+.buttoncontainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 35px;
+}
+
+.applepay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  padding-top: 10px;
+}
+
+.applepaybutton {
+  display: flex;
+  justify-content: center;
+  width: 335px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.paypal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  padding-top: 10px;
+}
+
+.paypalbutton {
+  display: flex;
+  justify-content: center;
+  width: 335px;
+  height: 60px;
+  border-radius: 5px;
+}

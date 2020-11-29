@@ -22,10 +22,10 @@ const Navigation = () => {
             Profile
           </div>
         </Link>
-        <Link to="/shop">
+        <Link to="/cart">
           <div className="shopnav">
             <img src={shop} className="shopimagenav" alt="shop" />
-            Shop
+            Cart
           </div>
         </Link>
         <Link to="/chat">

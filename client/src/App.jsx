@@ -11,9 +11,11 @@ import Calendar from './Pages/calendar/';
 import moment from 'moment';
 import Navigation from './components/Navigation/Navigation.jsx';
 import './App.css';
-import Cart from './Pages/ShoppingCart/cart';
-import axios from 'axios';
 import Chat from './components/Chat/Chat.jsx';
+import Cart from './Pages/ShoppingCart/Cart';
+import medProfile from './Pages/MedProfile/medProfile';
+import axios from 'axios';
+import summary from './Pages/Summary/summary';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(moment());
@@ -38,6 +40,12 @@ function App() {
           <PrivateRoute exact path="/home" component={Home} />
           <PrivateRoute exact path="/shop" component={Shop} />
           <PrivateRoute exact path="/cart" component={Cart} />
+          <PrivateRoute excat path="/summary" component={summary} />
+          <PrivateRoute
+            excat
+            path="/medicine/:medicineid"
+            component={medProfile}
+          />
           <Route exact path="/login" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dailylog" component={DailyLog} />
