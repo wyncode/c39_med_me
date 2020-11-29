@@ -22,8 +22,8 @@ const Shop = () => {
   const filteredMedicines =
     medicines &&
     medicines?.filter((medicine) => {
-      if  (medicine.name.toLowerCase().includes(search)){
-        return (medicine)
+      if (medicine.name.toLowerCase().includes(search)) {
+        return medicine;
       }
     });
 
@@ -40,11 +40,14 @@ const Shop = () => {
       </div>
       {search &&
         filteredMedicines.map((med) => {
-          return<>
-          <Link to= {`/medicine/${med._id}`}>
-          <div>{med.name}</div></Link>
-          <div>{med.avatar}</div>
-          </>;
+          return (
+            <>
+              <Link to={`/medicine/${med._id}`}>
+                <div>{med.name}</div>
+              </Link>
+              <div>{med.avatar}</div>
+            </>
+          );
         })}
       <div className="mainimagecontainer">
         <img className="familyimage" src={ShopImage} alt="onlineShop" />
