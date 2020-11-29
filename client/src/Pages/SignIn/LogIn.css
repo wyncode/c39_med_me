@@ -1,4 +1,3 @@
-
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -6,33 +5,31 @@
 .dataformcontainer h2 {
   font-size: 12px;
   font-weight: normal;
-} */
+}
 
 .menucontainer {
   display: flex;
-}
-
-.loginlogcontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 375px;
-  height: 150px;
-}
-
-.loginlogoimage {
-  display: flex;
-  justify-content: center;
-  padding-left: 25px;
-  width: 200px;
-  height: 150px;
 }
 
 .fullview {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 10px;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.loginlogcontainer {
+  display: flex;
+  width: 375px;
+  height: 100px;
+}
+
+.loginlogoimage {
+  display: flex;
+  padding-left: 25px;
+  width: 200px;
+  height: 150px;
 }
 
 .signinblue {
@@ -63,7 +60,7 @@
   border-radius: 15px;
   width: 250px;
   height: 500px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 
 .dataformcontainer {

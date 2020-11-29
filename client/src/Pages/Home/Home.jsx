@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import refills from '../../Images/refills.png';
 import calendar from '../../Images/calendar.png';
 import dailylog from '../../Images/dailylog.png';
-import shop from '../../Images/shop.png';
+import Shop from '../../Images/shop.png';
 import family from '../../Images/family.png';
 import logo from '../../Images/medmelogo.png';
 import Navigation from '../../components/Navigation/Navigation';
@@ -24,7 +24,7 @@ const Home = () => {
           <h1 className="pagegreeting">Hello, {currentUser?.name}!</h1>
         </div>
         <div className="mainimagecontainer">
-          <img className="familyimage" src={family} />+
+          <img className="familyimage" src={family} />
         </div>
         <div>
           <div className="medicinesrow">
@@ -54,7 +54,7 @@ const Home = () => {
             </div>
             <div className="shop">
               <Link to="/shop" className="shopimagecontainer">
-                <img className="shopimage" src={shop} alt="shop" />
+                <img className="shopimage" src={Shop} alt="shop" />
               </Link>
               <Link to="/shop" className="hometext">
                 Shop

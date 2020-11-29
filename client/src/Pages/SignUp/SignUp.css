@@ -1,4 +1,3 @@
-
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -17,13 +16,13 @@ h2 {
 }
 
 .menucontainer {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .signuplogocontainer {
   display: flex;
   height: 100px;
-  padding-top: 10px;
+  padding-top: 20px;
   margin: 0px;
 }
 
@@ -55,7 +54,7 @@ h2 {
   border-radius: 15px;
   width: 250px;
   height: 650px;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
   padding-top: 25px;
   padding-right: 25px;
   padding-left: 25px;
@@ -87,16 +86,12 @@ label {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
   width: 200px;
-  margin-top: 10px;
 }
 
 .createaccountcontainer {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
   padding-bottom: 10px;
 }
 
