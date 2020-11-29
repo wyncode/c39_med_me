@@ -1,3 +1,4 @@
+/* this should be a className not an html tag */
 img {
   display: flex;
   justify-content: center;
@@ -63,7 +64,6 @@ img {
   width: 125px;
   color: #253965;
 }
-
 .calendarhome {
   display: flex;
   flex-direction: column;
@@ -73,7 +73,6 @@ img {
   width: 125px;
   color: #253965;
 }
-
 .dailylog {
   display: flex;
   flex-direction: column;

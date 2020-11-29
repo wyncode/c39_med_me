@@ -5,6 +5,13 @@ const createMedicine = async (req, res) => {
     const medicine = new Medicine(req.body);
     await medicine.save();
     console.log(medicine);
+    req.user.medicineCabinet.push(medicine);
+    req.user.save();
+    await req.user
+      .populate({
+        path: 'medicineCabinet'
+      })
+      .execPopulate();
     res.status(200).json(medicine);
   } catch (error) {
     res.status(400).json({ error: error.message });
