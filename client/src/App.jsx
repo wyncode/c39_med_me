@@ -11,6 +11,7 @@ import Calendar from './Pages/calendar/';
 import moment from 'moment';
 import Navigation from './components/Navigation/Navigation.jsx';
 import './App.css';
+import Chat from './components/Chat/Chat.jsx';
 import Cart from './Pages/ShoppingCart/Cart';
 import medProfile from './Pages/MedProfile/medProfile';
 import axios from 'axios';
@@ -49,6 +50,7 @@ function App() {
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dailylog" component={DailyLog} />
           <Route exact path="/" component={Home} />
+          <Route exact path="/chat" component={Chat} />
           <PrivateRoute
             exact
             path="/calendar"
