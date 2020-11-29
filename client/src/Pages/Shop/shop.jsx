@@ -26,12 +26,12 @@ const Shop = () => {
     });
 
   return (
-    <div>
-      <div className="homelogo">
-        <img className="homelogo" src={logo} alt="logo" />
+    <div className="containershop">
+      <div className="homelogo3">
+        <img className="homelogo2" src={logo} alt="logo" />
       </div>
-      <div>
-        <h1 className="pagegreeting">Let's Shop {currentUser?.name}</h1>
+      <div className="pagegreet3">
+        <h1 className="pagegreet4">Let's Shop {currentUser?.name}!</h1>
       </div>
       <div className="searchContainer">
         <SearchBar />
@@ -40,56 +40,75 @@ const Shop = () => {
         filteredMedicines.map((med) => {
           return <div>{med.name}</div>;
         })}
-      <div className="mainimagecontainer">
-        <img className="familyimage" src={ShopImage} alt="onlineShop" />
+      <div className="mainimagecontainer2">
+        <img className="familyimage2" src={ShopImage} alt="onlineShop" />
       </div>
-      <div>
-        <div>
+
+      <div className="drugdrug">
+        <div className="drugrow1">
           <Link to="/pain">
-            <div className="drugimagecontainer">
-              <img className="livepix" src={pain} alt="pain" />
+            <div className="drugimagecontainer1">
+              <img className="livepix1" src={pain} alt="pain" />
             </div>
-            <h2 className="shoptext">Pain and Fever</h2>
+            <div className="shoptext1">
+              <h2>Pain and Fever</h2>
+            </div>
           </Link>
           <Link>
-            <div className="drugimagecontainer">
-              <img className="livepix" src={allergy} alt="allergy" />
+            <div className="drugimagecontainer2">
+              <img className="livepix2" src={allergy} alt="allergy" />
             </div>
-            <h2 className="shoptext">Allergy</h2>
-          </Link>
-          <Link to="/firstaid">
-            <div className="drugimagecontainer">
-              <img className="livepix" src={firstAid} alt="firstAid" />
+            <div className="shoptext2">
+              <h2>Allergy</h2>
             </div>
-            <h2 className="shoptext">First Aid</h2>
-          </Link>
-          <Link to="/vitamins">
-            <div className="drugimagecontainer">
-              <img className="livepix" src={vitamin} alt="vitamin" />
-            </div>
-            <h2 className="shoptext">Vitamins</h2>
-          </Link>
-          <Link to="/personal">
-            <div className="drugimagecontainer">
-              <img className="livepix" src={personal} alt="personal" />
-            </div>
-            <h2 className="shoptext">Personal Care</h2>
-          </Link>
-          <Link to="/natural">
-            <div className="drugimagecontainer">
-              <img className="livepix" src={natural} alt="natural" />
-            </div>
-            <h2 className="shoptext">Natural Remedies</h2>
           </Link>
         </div>
-      </div>
-      <div>
-        <Link className="store">
-          <div className="storeimagecontainer">
-            <img className="storeimage" src={drugstore} alt="drugstore" />
-          </div>
-          <h2 className="seemoretext">See More</h2>
-        </Link>
+        <div className="drugrow2">
+          <Link to="/firstaid">
+            <div className="drugimagecontainer3">
+              <img className="livepix3" src={firstAid} alt="firstAid" />
+            </div>
+            <div className="shoptext3">
+              <h2>First Aid</h2>
+            </div>
+          </Link>
+          <Link to="/vitamins">
+            <div className="drugimagecontainer4">
+              <img className="livepix4" src={vitamin} alt="vitamin" />
+            </div>
+            <div className="shoptext4">
+              <h2>Vitamins</h2>
+            </div>
+          </Link>
+        </div>
+        <div className="drugrow3">
+          <Link to="/personal">
+            <div className="drugimagecontainer5">
+              <img className="livepix5" src={personal} alt="personal" />
+            </div>
+            <div className="shoptext5">
+              <h2>Personal Care</h2>
+            </div>
+          </Link>
+          <Link to="/natural">
+            <div className="drugimagecontainer6">
+              <img className="livepix6" src={natural} alt="natural" />
+            </div>
+            <div className="shoptext6">
+              <h2>Natural Remedies</h2>
+            </div>
+          </Link>
+        </div>
+        <div className="drugrow4">
+          <Link>
+            <div className="drugimagecontainer7">
+              <img className="livepix7" src={drugstore} alt="drugstore" />
+            </div>
+            <div className="shoptext7">
+              <h2>See More</h2>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   );
