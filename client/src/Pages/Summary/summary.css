@@ -2,12 +2,13 @@
   display: flex;
   justify-content: row;
   justify-content: space-around;
-  padding-top: 40px;
+  padding-top: 35px;
 }
 .ordersumcontainer {
   display: flex;
   justify-content: row;
   justify-content: center;
+  padding-top: 15px;
 }
 
 .ordersum {
