@@ -1,0 +1,70 @@
+.homechat {
+  display: flex;
+  justify-content: row;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+.ordersumcontainer {
+  display: flex;
+  justify-content: row;
+  justify-content: center;
+}
+
+.ordersum {
+  background-color: #d9eeff;
+  border-radius: 5px;
+  height: 26vh;
+  width: 44vh;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.prep {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 27px;
+  color: black;
+}
+
+.driver {
+  margin: 15px;
+  padding-top: 5px;
+  color: #757575;
+}
+
+.thank {
+  margin: 15px;
+  padding-top: 5px;
+  color: #757575;
+}
+
+.confirm {
+  margin: 15px;
+  padding-top: 5px;
+  color: #757575;
+}
+
+.sumhome {
+  display: flex;
+  justify-content: space-around;
+  width: 117px;
+  height: 41px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  align-items: center;
+  text-decoration: none;
+  color: #f5f9ff;
+}
+
+.sumchat {
+  display: flex;
+  justify-content: space-around;
+  width: 180px;
+  height: 41px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  align-items: center;
+  text-decoration: none;
+  color: #f5f9ff;
+}

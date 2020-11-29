@@ -83,7 +83,9 @@ const Cart = () => {
       </div>
       <div>Total Amount: ${totalTylenol + totalAleve + totalMotrin}</div>
       <div>
-        <button>Checkout Checkout</button>
+        <Link to="/summary">
+          <button>Checkout Checkout</button>
+        </Link>
       </div>
     </div>
   );
