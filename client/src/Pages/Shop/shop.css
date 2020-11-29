@@ -1,4 +1,357 @@
-.drugimagecontainer {
+.containershop {
+  width: 414px;
+  height: 1966px;
+}
+.homelogo2 {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  width: 110px;
+  height: 85px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.pagegreet3 {
+  position: absolute;
+  top: 82px;
+  left: 30px;
+  height: 35px;
+}
+.pagegreet4 {
+  margin: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #253965, 100%;
+}
+
+.searchContainer {
+  position: absolute;
+  width: 350px;
+  height: 50px;
+  top: 110px;
+  left: 30px;
+}
+.mainimagecontainer2 {
+  position: absolute;
+  top: 191px;
+  left: 30px;
+  width: 343.02px;
+  height: 258.45px;
+  padding: 0px;
+}
+.familyimage2 {
+  width: 343.02px;
+  height: 258.45px;
+}
+.shopconatiner1 {
+  position: absolute;
+  top: 571px;
+  width: 350px;
+  height: 1265px;
+}
+.drugdrug {
+  position: absolute;
+  top: 491px;
+  left: 30px;
+  padding-bottom: 54px;
+  height: 1181px;
+  width: 350px;
+}
+.drugrow1 {
+  width: 350px;
+  height: 273px;
+}
+.drugimagecontainer1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #eff8ff;
+  height: 188px;
+  width: 164px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.drugimagecontainer2 {
+  position: absolute;
+  top: 0px;
+  left: 184px;
+  background-color: #eff8ff;
+  height: 188px;
+  width: 164px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.livepix1 {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  width: 125px;
+  height: 131px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.livepix2 {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  width: 125px;
+  height: 131px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.shoptext1 {
+  position: absolute;
+  top: 215px;
+  left: 0px;
+  width: 164px;
+  height: 59px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.shoptext1 h2 {
+  position: absolute;
+  top: 19px;
+  left: 20px;
+  margin: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.shoptext2 {
+  position: absolute;
+  top: 215px;
+  left: 186px;
+  width: 164px;
+  height: 59px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.shoptext2 h2 {
+  position: absolute;
+  top: 19px;
+  left: 56px;
+  margin: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.drugrow2 {
+  position: absolute;
+  top: 327px;
+  width: 350px;
+  height: 273px;
+}
+.drugimagecontainer3 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #eff8ff;
+  height: 188px;
+  width: 164px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.drugimagecontainer4 {
+  position: absolute;
+  top: 0px;
+  left: 184px;
+  background-color: #eff8ff;
+  height: 188px;
+  width: 164px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.livepix3 {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  width: 125px;
+  height: 131px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.livepix4 {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  width: 125px;
+  height: 131px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.shoptext3 {
+  position: absolute;
+  top: 215px;
+  left: 0px;
+  width: 164px;
+  height: 59px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.shoptext3 h2 {
+  position: absolute;
+  top: 19px;
+  left: 47px;
+  margin: 0px;
+  height: 21px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.shoptext4 {
+  position: absolute;
+  top: 215px;
+  left: 186px;
+  width: 164px;
+  height: 59px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.shoptext4 h2 {
+  position: absolute;
+  top: 19px;
+  left: 47px;
+  margin: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.drugrow3 {
+  position: absolute;
+  top: 655px;
+  width: 350px;
+  height: 273px;
+}
+.drugimagecontainer5 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #eff8ff;
+  height: 188px;
+  width: 164px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.drugimagecontainer6 {
+  position: absolute;
+  top: 0px;
+  left: 184px;
+  background-color: #eff8ff;
+  height: 188px;
+  width: 164px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.livepix5 {
+  position: absolute;
+  top: 35px;
+  width: 125px;
+  height: 131px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.livepix6 {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  width: 125px;
+  height: 131px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.shoptext5 {
+  position: absolute;
+  top: 215px;
+  left: 0px;
+  width: 164px;
+  height: 59px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.shoptext5 h2 {
+  position: absolute;
+  top: 19px;
+  left: 25px;
+  margin: 0px;
+  height: 21px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.shoptext6 {
+  position: absolute;
+  top: 215px;
+  left: 186px;
+  width: 164px;
+  height: 59px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.shoptext6 h2 {
+  position: absolute;
+  top: 10px;
+  left: 47px;
+  margin: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.drugrow4 {
+  position: absolute;
+  top: 984px;
+  width: 350px;
+  height: 281px;
+}
+.livepix7 {
+  width: 350px;
+  height: 197px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+}
+.shoptext7 {
+  position: absolute;
+  width: 350px;
+  height: 59px;
+  top: 222px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.shoptext7 h2 {
+  position: absolute;
+  width: 78px;
+  height: 21px;
+  left: 136px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+/* .drugimagecontainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +361,7 @@
   width: 150px;
   border-radius: 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+} 
 
 .storeimage {
   width: 350px;
@@ -39,4 +392,4 @@
   height: 59px;
   padding-top: 19px;
   text-align: center;
-}
+}  */
