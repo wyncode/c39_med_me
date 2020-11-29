@@ -7,19 +7,20 @@ img {
   width: 75px;
 }
 
+.fullview {
+  width: 375px;
+}
+
 .hometext {
   font-size: 18px;
-  text-align: center;
   padding-top: 5px;
   padding-bottom: 10px;
+  color: #253965;
 }
 
 .homecontainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-left: 20px;
-  padding-bottom: 40px;
 }
 
 .homelogo {
@@ -28,36 +29,29 @@ img {
   width: 100px;
   height: 75px;
   margin: 0px;
-  padding-bottom: 10px;
-  padding-right: 225px;
+  padding-left: 15px;
 }
 
 .pagegreeting {
   font-size: 30px;
   display: flex;
-  justify-content: left;
   color: #253965;
   margin: 0px;
-  padding-right: 100px;
+  padding-left: 40px;
 }
 
 .familyimage {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 300px;
-  width: 350px;
-  padding-left: 10px;
+  align-content: center;
+  height: 275px;
+  width: 340px;
 }
 
 .mainimagecontainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 300px;
-  width: 375px;
-  padding-right: 5px;
-  padding-left: 5px;
+  align-content: center;
   padding-top: 10px;
 }
 
@@ -67,21 +61,25 @@ img {
   justify-content: center;
   align-items: center;
   height: 150px;
-  width: 150px;
-  height: 150px;
-  width: 150px;
+  width: 125px;
   color: #253965;
 }
-
+.calendarhome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 125px;
+  color: #253965;
+}
 .dailylog {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 150px;
-  width: 150px;
-  height: 150px;
-  width: 150px;
+  width: 125px;
   color: #253965;
 }
 
@@ -91,9 +89,7 @@ img {
   justify-content: center;
   align-items: center;
   height: 150px;
-  width: 150px;
-  height: 150px;
-  width: 150px;
+  width: 125px;
   color: #253965;
 }
 
@@ -152,15 +148,17 @@ img {
 }
 
 .medicinesrow {
+  margin: 0px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: 325px;
+  width: 375px;
 }
 
 .dailylogrow {
+  margin: 0px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: 325px;
+  width: 375px;
 }

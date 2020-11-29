@@ -9,6 +9,7 @@ import dailylog from '../../Images/dailylog.png';
 import shop from '../../Images/shop.png';
 import family from '../../Images/family.png';
 import logo from '../../Images/medmelogo.png';
+import Navigation from '../../components/Navigation/Navigation';
 
 const Home = () => {
   const { currentUser } = useContext(AppContext);
@@ -19,8 +20,8 @@ const Home = () => {
         <div className="homelogo">
           <img className="homelogo" src={logo} alt="logo" />
         </div>
-        <div>
-          <h1 className="pagegreeting">Hello, {currentUser?.user?.name}!</h1>
+        <div className="pagegreetingcontainer">
+          <h1 className="pagegreeting">Hello, {currentUser?.name}!</h1>
         </div>
         <div className="mainimagecontainer">
           <img className="familyimage" src={family} />+
@@ -33,29 +34,36 @@ const Home = () => {
               </Link>
               <Link className="hometext">My Medicines</Link>
             </div>
-            <div className="calendar">
-              <Link className="calendarimagecontainer">
+            <div className="calendarhome">
+              <Link to="/calendar" className="calendarimagecontainer">
                 <img className="calendarimage" src={calendar} alt="calendar" />
               </Link>
-              <Link className="hometext">Calendar</Link>
+              <Link to="/calendar" className="hometext">
+                Calendar
+              </Link>
             </div>
           </div>
           <div className="dailylogrow">
             <div className="dailylog">
-              <Link className="dailylogimagecontainer">
+              <Link to="/dailylog" className="dailylogimagecontainer">
                 <img className="dailylogimage" src={dailylog} alt="dailylog" />
               </Link>
-              <Link className="hometext">Daily Log</Link>
+              <Link to="/dailylog" className="hometext">
+                Daily Log
+              </Link>
             </div>
             <div className="shop">
-              <Link className="shopimagecontainer">
+              <Link to="/shop" className="shopimagecontainer">
                 <img className="shopimage" src={shop} alt="shop" />
               </Link>
-              <Link className="hometext">Shop</Link>
+              <Link to="/shop" className="hometext">
+                Shop
+              </Link>
             </div>
           </div>
         </div>
       </div>
+      <Navigation />
     </div>
   );
 };
