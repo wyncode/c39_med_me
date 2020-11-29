@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import refills from '../../Images/refills.png';
 import calendar from '../../Images/calendar.png';
 import dailylog from '../../Images/dailylog.png';
-import shop from '../../Images/Shop.png';
+import shop from '../../Images/shop.png';
 import family from '../../Images/family.png';
 import logo from '../../Images/medmelogo.png';
 import Navigation from '../../components/Navigation/Navigation';

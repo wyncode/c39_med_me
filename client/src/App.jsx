@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import LogIn from './Pages/SignIn/LogIn';
 import SignUp from './Pages/SignUp/SignUp';
-import Shop from './Pages/Shop/Shop.jsx';
+import Shop from './Pages/Shop/shop.jsx';
 import Home from './Pages/Home/Home';
 import PrivateRoute from './components/PrivateRoute';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -11,8 +11,9 @@ import Calendar from './Pages/calendar/';
 import moment from 'moment';
 import Navigation from './components/Navigation/Navigation.jsx';
 import './App.css';
-import Cart from './Pages/ShoppingCart/Cart';
+import Cart from './Pages/ShoppingCart/cart';
 import axios from 'axios';
+import Chat from './components/Chat/Chat.jsx';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(moment());
@@ -41,6 +42,7 @@ function App() {
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dailylog" component={DailyLog} />
           <Route exact path="/" component={Home} />
+          <Route exact path="/chat" component={Chat} />
           <PrivateRoute
             exact
             path="/calendar"
