@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -9,7 +9,7 @@ h1 {
 h2 {
   font-size: 12px;
   font-weight: normal;
-}
+} */
 
 .fullview {
   display: flex;
