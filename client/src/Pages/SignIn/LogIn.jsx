@@ -20,7 +20,7 @@ const LogIn = ({ history }) => {
       const response = await axios.post('/api/login', formData);
       setCurrentUser(response.data);
       sessionStorage.setItem('user', response.data);
-      history.push('/');
+      history.push('/home');
     } catch (error) {
       swal(`Oops!`, 'Invalid email or password.');
     }

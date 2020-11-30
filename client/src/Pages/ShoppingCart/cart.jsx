@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import Pain from '../../Images/pain.png';
 import Aleve from '../../Images/aleve.png';
 import Tylenol from '../../Images/tylenol.png';
-import Navigation from '../../components/Navigation/Navigation';
-import './Cart.css';
-import applepay from '../../Images/apple.png';
-import paypal from '../../Images/paypal.png';
 
 const Cart = () => {
   const [countTylenol, setCountTylenol] = useState(1);
@@ -17,20 +13,9 @@ const Cart = () => {
   const totalMotrin = countMotrin * 10.0;
   const totalAleve = countAleve * 10.0;
 
-  // const [total, setTotal] = useState(countTylenol+countMotrin+countAleve)
-
-  // function setTotal(){
-  //     setTotal(countTylenol+countMotrin+countAleve)
-  // }
 
   return (
     <div>
-      <div className="carttext">
-        Cart
-        <p className="pleasemakesure">
-          Please verify all items in cart are correct.
-        </p>
-      </div>
       <div className="cartcontainer">
         <div className="itemcontainer">
           <div className="tylenolcontainer">

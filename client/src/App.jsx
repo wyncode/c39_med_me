@@ -46,12 +46,13 @@ function App() {
             path="/medicine/:medicineid"
             component={medProfile}
           />
-          <Route exact path="/login" component={LogIn} />
+          <Route exact path="/" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dailylog" component={DailyLog} />
-          <PrivateRoute exact path="/" component={Home} />
+
           <PrivateRoute exact path="/chat" component={Chat} />
           <Route
+
             exact
             path="/calendar"
             render={(props) => (

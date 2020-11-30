@@ -1,4 +1,8 @@
-# Final Project
+# MedMe_c39
+
+## Purpose
+
+- To facilitate communication between users and pharmacies with app. Provide faster access to everyday healthcare needs.
 
 ## Setup
 
@@ -23,5 +27,3 @@ NOTE: Heroku specifically runs `npm start`, so don't remove that from your packa
 - `heroku create your-app-name`
 - `heroku config:set MONGODB_URL=<insertYourAtlasDbUri>`
 - `git push heroku master`
-
-
