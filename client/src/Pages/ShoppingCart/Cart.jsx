@@ -137,7 +137,9 @@ const Cart = () => {
           Total Amount:<b>${totalTylenol + totalAleve + totalMotrin}</b>
         </div>
         <div className="applepay">
-          <img className="applepaybutton" src={applepay} alt="applepay" />
+          <Link to="/summary">
+            <img className="applepaybutton" src={applepay} alt="applepay" />
+          </Link>
         </div>
         <div className="paypal">
           <img className="paypalbutton" src={paypal} alt="paypal" />
