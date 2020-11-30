@@ -49,9 +49,10 @@ function App() {
           <Route exact path="/" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dailylog" component={DailyLog} />
-          {/* <Route exact path="/" component={Home} /> */}
-          <Route exact path="/chat" component={Chat} />
-          <PrivateRoute
+
+          <PrivateRoute exact path="/chat" component={Chat} />
+          <Route
+
             exact
             path="/calendar"
             render={(props) => (

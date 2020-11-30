@@ -13,79 +13,123 @@ const Cart = () => {
   const totalMotrin = countMotrin * 10.0;
   const totalAleve = countAleve * 10.0;
 
-  // const [total, setTotal] = useState(countTylenol+countMotrin+countAleve)
-
-  // function setTotal(){
-  //     setTotal(countTylenol+countMotrin+countAleve)
-  // }
 
   return (
     <div>
-      <div>
-        <img className="tylenolbox" src={Tylenol} />
-        <div>Tylenol</div>
-        <div>${totalTylenol}</div>
-        <p>{countTylenol}</p>
-        <button
-          onClick={() => {
-            setCountTylenol(countTylenol - 1);
-          }}
-        >
-          -
-        </button>
-        <button
-          onClick={() => {
-            setCountTylenol(countTylenol + 1);
-          }}
-        >
-          +
-        </button>
-      </div>
-      <div>
-        <img className="motrinbox" src={Pain} />
-        <div>Motrin</div>
-        <div>${totalMotrin}</div>
-        <p>{countMotrin}</p>
-        <button
-          onClick={() => {
-            setCountMotrin(countMotrin - 1);
-          }}
-        >
-          -
-        </button>
-        <button
-          onClick={() => {
-            setCountMotrin(countMotrin + 1);
-          }}
-        >
-          +
-        </button>
-      </div>
-      <div>
-        <img className="alevebox" src={Aleve} />
-        <div>Aleve</div>
-        <div>${totalAleve}</div>
-        <p>{countAleve}</p>
-        <button
-          onClick={() => {
-            setCountAleve(countAleve - 1);
-          }}
-        >
-          -
-        </button>
-        <button
-          onClick={() => {
-            setCountAleve(countAleve + 1);
-          }}
-        >
-          +
-        </button>
-      </div>
-      <div>Total Amount: ${totalTylenol + totalAleve + totalMotrin}</div>
-      <div>
-        <Link to="/summary">
-          <button>Checkout Checkout</button>
-        </Link>
+      <div className="cartcontainer">
+        <div className="itemcontainer">
+          <div className="tylenolcontainer">
+            <div className="tylenolbox">
+              <img src={Tylenol} alt="tylenol" />
+            </div>
+            <div className="tylenollabel">
+              <div>
+                <b>Tylenol</b> x {countTylenol}
+              </div>
+              <div>${totalTylenol}</div>
+            </div>
+            <div className="buttoncontainer">
+              <button
+                className="decrementbutton"
+                onClick={() => {
+                  setCountTylenol(countTylenol - 1);
+                }}
+              >
+                -
+              </button>
+            </div>
+            <div className="buttoncontainer">
+              <button
+                button
+                className="incrementbutton"
+                onClick={() => {
+                  setCountTylenol(countTylenol + 1);
+                }}
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="itemcontainer">
+          <div className="motrincontainer">
+            <div className="motrinbox">
+              <img src={Pain} alt="motrin" />
+            </div>
+            <div className="motrinlabel">
+              <div>
+                <b>Motrin</b> x {countMotrin}
+              </div>
+              <div>${totalMotrin}</div>
+            </div>
+            <div className="buttoncontainer">
+              <button
+                className="decrementbutton"
+                onClick={() => {
+                  setCountMotrin(countMotrin - 1);
+                }}
+              >
+                -
+              </button>
+            </div>
+            <div className="buttoncontainer">
+              <button
+                button
+                className="incrementbutton"
+                onClick={() => {
+                  setCountMotrin(countMotrin + 1);
+                }}
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="itemcontainer">
+          <div className="alevecontainer">
+            <div className="alevebox">
+              <img src={Aleve} alt="aleve" />
+            </div>
+            <div className="alevelabel">
+              <div>
+                <b>Aleve</b> x {countAleve}
+              </div>
+              <div>${totalAleve}</div>
+            </div>
+            <div className="buttoncontainer">
+              <button
+                className="decrementbutton"
+                onClick={() => {
+                  setCountAleve(countAleve - 1);
+                }}
+              >
+                -
+              </button>
+            </div>
+            <div className="buttoncontainer">
+              <button
+                className="incrementbutton"
+                onClick={() => {
+                  setCountAleve(countAleve + 1);
+                }}
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="totalamountcontainer">
+          Total Amount:<b>${totalTylenol + totalAleve + totalMotrin}</b>
+        </div>
+        <div className="applepay">
+          <Link to="/summary">
+            <img className="applepaybutton" src={applepay} alt="applepay" />
+          </Link>
+        </div>
+        <div className="paypal">
+          <img className="paypalbutton" src={paypal} alt="paypal" />
+        </div>
+        <Navigation className="navbar" />
       </div>
     </div>
   );
