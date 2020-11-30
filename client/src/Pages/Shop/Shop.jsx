@@ -41,12 +41,12 @@ const Shop = () => {
         <SearchBar />
       </div>
       {search &&
-        filteredMedicines.map((med) => {
+        filteredMedicines.map((medicine) => {
           return (
             <>
               <div className="searchresult">
-                <Link to={`/medicine/${med._id}`}>
-                  <img src={med.avatar} alt="tylenol" />
+                <Link to={`/medicine/${medicine._id}`}>
+                  <img src={medicine.avatar} alt="tylenol" />
                 </Link>
               </div>
             </>
