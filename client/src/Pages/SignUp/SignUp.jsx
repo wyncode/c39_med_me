@@ -32,7 +32,7 @@ const SignUp = ({ history }) => {
           <img className="loginlogoimage" src={logo} alt="logo" />
         </div>
         <div className="menucontainer">
-          <Link to="/login" className="signin">
+          <Link to="/" className="signin">
             Sign In
           </Link>
           <div className="signupblue">Sign Up</div>
