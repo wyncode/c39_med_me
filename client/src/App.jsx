@@ -11,7 +11,7 @@ import Calendar from './Pages/calendar/';
 import moment from 'moment';
 import './App.css';
 import Chat from './components/Chat/Chat.jsx';
-import Cart from './Pages/ShoppingCart/TempCart';
+import Cart from './Pages/ShoppingCart/Cart';
 import medProfile from './Pages/MedProfile/medProfile';
 import axios from 'axios';
 import summary from './Pages/Summary/summary';
