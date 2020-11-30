@@ -19,7 +19,6 @@ const Shop = () => {
   const { medicines, search } = useContext(AppContext);
   const [isActive, setisActive] = useState(false);
 
-  console.log('hi')
   const filteredMedicines =
     medicines &&
     medicines?.filter((medicine) => {
