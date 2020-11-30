@@ -30,7 +30,7 @@ const Shop = () => {
   return (
     <div className="containershop">
       <div className="homelogo3">
-        <Link to="">
+        <Link to="/home">
           <img className="homelogo2" src={logo} alt="logo" />
         </Link>
       </div>
@@ -44,7 +44,7 @@ const Shop = () => {
         filteredMedicines.map((med) => {
           return (
             <>
-              <div>
+              <div className="searchresult">
                 <Link to={`/medicine/${med._id}`}>
                   <img src={med.avatar} alt="tylenol" />
                 </Link>

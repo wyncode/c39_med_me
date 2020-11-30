@@ -24,7 +24,7 @@ const Home = () => {
           <h1 className="pagegreeting">Hello, {currentUser?.name}!</h1>
         </div>
         <div className="mainimagecontainer">
-          <img className="familyimage" src={family} />
+          <img className="familyimage" src={family} alt="family" />
         </div>
         <div>
           <div className="medicinesrow">

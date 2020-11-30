@@ -16,7 +16,7 @@ const MedicineCabinet = () => {
               <div>Quantity: {medicine.quantity}</div>
               <div>Price: $ {medicine.price}</div>
               <div>Description: {medicine.description}</div>
-              <img src={medicine.avatar} />
+              <img src={medicine.avatar} alt="{medicine.name}" />
             </div>
           );
         })

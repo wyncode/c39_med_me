@@ -40,10 +40,14 @@ const Summary = () => {
         </div>
         <div className="homechat">
           <div className="sumhome">
-            <Link to="/home">Home</Link>
+            <Link to="/home">
+              <h2>Home</h2>
+            </Link>
           </div>
           <div className="sumchat">
-            <Link to="/chat">Chat With Pharmacist</Link>
+            <Link to="/chat">
+              <h2>Chat With Pharmacist</h2>
+            </Link>
           </div>
         </div>
       </div>
