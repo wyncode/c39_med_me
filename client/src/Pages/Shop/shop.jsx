@@ -42,10 +42,10 @@ const Shop = () => {
         filteredMedicines.map((med) => {
           return (
             <>
-             <div>
-              <Link to={`/medicine/${med._id}`}>
-                <img src={med.avatar} alt= "tylenol"/>
-              </Link>
+              <div>
+                <Link to={`/medicine/${med._id}`}>
+                  <img src={med.avatar} alt="tylenol" />
+                </Link>
               </div>
             </>
           );

@@ -138,7 +138,7 @@ const Cart = () => {
         </div>
         <div className="applepay">
           <Link to="/summary">
-          <img className="applepaybutton" src={applepay} alt="applepay" />
+            <img className="applepaybutton" src={applepay} alt="applepay" />
           </Link>
         </div>
         <div className="paypal">
