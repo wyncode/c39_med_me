@@ -9,10 +9,9 @@ import { AppContext } from './context/AppContext';
 import DailyLog from './Pages/DailyLog/DailyLog';
 import Calendar from './Pages/calendar/';
 import moment from 'moment';
-import Navigation from './components/Navigation/Navigation.jsx';
 import './App.css';
 import Chat from './components/Chat/Chat.jsx';
-import Cart from './Pages/ShoppingCart/Cart';
+import Cart from './Pages/ShoppingCart/TempCart';
 import medProfile from './Pages/MedProfile/medProfile';
 import axios from 'axios';
 import summary from './Pages/Summary/summary';
@@ -48,11 +47,9 @@ function App() {
           />
           <Route exact path="/" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/dailylog" component={DailyLog} />
-
+          <PrivateRoute exact path="/dailylog" component={DailyLog} />
           <PrivateRoute exact path="/chat" component={Chat} />
           <Route
-
             exact
             path="/calendar"
             render={(props) => (

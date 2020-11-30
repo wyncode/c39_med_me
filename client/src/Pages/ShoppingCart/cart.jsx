@@ -13,7 +13,6 @@ const Cart = () => {
   const totalMotrin = countMotrin * 10.0;
   const totalAleve = countAleve * 10.0;
 
-
   return (
     <div>
       <div className="cartcontainer">

@@ -13,9 +13,9 @@ const Cart = () => {
   const [countMotrin, setCountMotrin] = useState(1);
   const [countAleve, setCountAleve] = useState(1);
 
-  const totalTylenol = countTylenol * 10.0;
+  const totalTylenol = countTylenol * 15.0;
   const totalMotrin = countMotrin * 10.0;
-  const totalAleve = countAleve * 10.0;
+  const totalAleve = countAleve * 12.0;
 
   // const [total, setTotal] = useState(countTylenol+countMotrin+countAleve)
 
