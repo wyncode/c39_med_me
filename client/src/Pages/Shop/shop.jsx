@@ -30,7 +30,9 @@ const Shop = () => {
   return (
     <div className="containershop">
       <div className="homelogo3">
-        <img className="homelogo2" src={logo} alt="logo" />
+        <Link to="">
+          <img className="homelogo2" src={logo} alt="logo" />
+        </Link>
       </div>
       <div className="pagegreet3">
         <h1 className="pagegreet4">Let's Shop {currentUser?.name}!</h1>

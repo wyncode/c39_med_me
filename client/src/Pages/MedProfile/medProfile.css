@@ -1,0 +1,250 @@
+.mainimage1 {
+  width: 414px;
+  height: 1416px;
+  border: 1px solid black;
+  background: white;
+}
+.mainimage1container {
+  display: flex;
+  width: 414px;
+  height: 458px;
+  background: linear-gradient(
+    180deg,
+    rgba(45, 81, 131, 0.68) 0%,
+    rgba(174, 194, 228, 0.47) 47.92%,
+    rgba(174, 194, 228, 0.44) 60.94%,
+    rgba(147, 171, 226, 0) 100%
+  );
+  border-radius: 0px 0px 20px 20px;
+}
+.mainimageimage {
+  position: absolute;
+  width: 236px;
+  height: 236px;
+  left: 95px;
+  top: 118px;
+}
+.mainimageimagename {
+  position: absolute;
+  width: 204px;
+  height: 28px;
+  left: 30px;
+  top: 508px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #2d5183;
+}
+.mainimageimagedosage {
+  position: absolute;
+  width: 62px;
+  height: 14px;
+  left: 30px;
+  top: 543px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #7b7b7b;
+}
+.mainimageimageprice {
+  position: absolute;
+  width: 63px;
+  height: 28px;
+  left: 30px;
+  top: 598px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #2d5183;
+}
+.mainimageimagedescription {
+  position: absolute;
+  width: 351px;
+  height: 82px;
+  left: 33px;
+  top: 672px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #7b7b7b;
+}
+.mainimageimageaddtocart {
+  position: absolute;
+  width: 355px;
+  height: 60px;
+  left: 30px;
+  top: 806px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.mainimageimageaddtocart h2 {
+  position: absolute;
+  left: 131px;
+  top: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.mainimageimageyoumay {
+  position: absolute;
+  width: 233px;
+  height: 28px;
+  left: 32px;
+  top: 922px;
+}
+.mainimageimageyoumay h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #2d5183;
+}
+.mainimageyoumay2 {
+  position: absolute;
+  width: 145px;
+  height: 258px;
+  left: 33px;
+  top: 1025px;
+
+  background: #f7f7fd;
+  border-radius: 5px;
+}
+.mainimageyoumay3 {
+  position: absolute;
+  width: 145px;
+  height: 258px;
+  left: 239px;
+  top: 1025px;
+
+  background: #f7f7fd;
+  border-radius: 5px;
+}
+.mainimageyoumay2image {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  width: 108px;
+  height: 108px;
+}
+.mainimageyoumay2imageimage {
+  padding: absolute;
+  top: 257px;
+  left: 1025px;
+  width: 108px;
+  height: 108px;
+}
+.mainimageyoumay3image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 108px;
+  height: 108px;
+}
+.mainimageyoumay3imageimage {
+  padding: absolute;
+  margin-top: 16px;
+  margin-left: 16px;
+  width: 108px;
+  height: 108px;
+}
+.mainimageyoumay2disc {
+  position: absolute;
+  left: 18px;
+  top: 124px;
+  width: 114px;
+  height: 28px;
+}
+.mainimageyoumay2disc h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #2d5183;
+}
+.mainimageyoumay3disc {
+  position: absolute;
+  left: 18px;
+  top: 124px;
+  width: 114px;
+  height: 28px;
+}
+.mainimageyoumay3disc h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #2d5183;
+}
+.mainimageyoumay2price {
+  position: absolute;
+  top: 30px;
+  width: 37px;
+  height: 16px;
+}
+.mainimageyoumay2price h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2d5183;
+}
+.mainimageyoumay3price {
+  position: absolute;
+  top: 26px;
+  width: 37px;
+  height: 16px;
+}
+.mainimageyoumay3price h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2d5183;
+}
+.mainimageyoumay2cart {
+  position: absolute;
+  width: 117px;
+  height: 41px;
+  left: -3px;
+  top: 70px;
+  background: #537edc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.mainimageyoumay2cart h2 {
+  position: absolute;
+  left: 23px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #f5f9ff;
+}
