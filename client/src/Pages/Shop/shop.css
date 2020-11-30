@@ -350,6 +350,11 @@
   line-height: 21px;
   color: #ffffff;
 }
+.searchresult {
+  position: absolute;
+  top: 160px;
+  left: 30px;
+}
 
 /* .drugimagecontainer {
   display: flex;

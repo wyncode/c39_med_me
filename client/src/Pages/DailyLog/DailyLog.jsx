@@ -12,7 +12,7 @@ function DailyLog() {
       <div>
         <img src={Group} alt="" className="lady" />
       </div>
-      <Link to="">
+      <Link to="/home">
         <img src={MedMe} alt="" className="logo" />
       </Link>
       <div className="form">
