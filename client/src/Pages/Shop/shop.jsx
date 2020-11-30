@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../../components/Search/Searchbar';
 import logo from '../../Images/logo.png';
-import ShopImage from '../../Images/Shop.png';
+import ShopImage from '../../Images/shop.png';
 import allergy from '../../Images/allergy.png';
 import drugstore from '../../Images/drugstore.png';
 import firstAid from '../../Images/firstAid.png';
@@ -42,10 +42,11 @@ const Shop = () => {
         filteredMedicines.map((med) => {
           return (
             <>
-              <Link to={`/medicine/${med._id}`}>
-                <div>{med.name}</div>
-              </Link>
-              <div>{med.avatar}</div>
+              <div>
+                <Link to={`/medicine/${med._id}`}>
+                  <img src={med.avatar} alt="tylenol" />
+                </Link>
+              </div>
             </>
           );
         })}

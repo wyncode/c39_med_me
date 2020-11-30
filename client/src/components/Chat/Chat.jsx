@@ -1,12 +1,16 @@
 import React from 'react';
+import Navigation from '../Navigation/Navigation';
 
 const Chat = () => {
   return (
-    <iframe
-      src="https://chat-react-socket.herokuapp.com/"
-      height="600px"
-      width="800px"
-    ></iframe>
+    <div className="fullchatcontainer">
+      <iframe
+        src="https://chat-react-socket.herokuapp.com/"
+        height="735px"
+        width="375px"
+      ></iframe>
+      <Navigation />
+    </div>
   );
 };
 
