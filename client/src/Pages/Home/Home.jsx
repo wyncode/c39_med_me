@@ -29,7 +29,7 @@ const Home = () => {
         <div>
           <div className="medicinesrow">
             <div className="mymedicines">
-              <Link className="refillimagecontainer">
+              <Link to="/mymeds" className="refillimagecontainer">
                 <img className="refillimage" src={refills} alt="refills" />
               </Link>
               <Link className="hometext">My Medicines</Link>

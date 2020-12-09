@@ -16,8 +16,8 @@ const Navigation = () => {
             Home
           </div>
         </Link>
-        <Link to="/mymeds">
-          <div className="mymeds">
+        <Link to="/profile">
+          <div className="profile">
             <img src={profile} className="profileimage" alt="profile" />
             Profile
           </div>
