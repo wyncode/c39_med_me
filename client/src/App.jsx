@@ -15,7 +15,7 @@ import axios from 'axios';
 import summary from './Pages/Summary/summary';
 import MyMeds from './Pages/MyMedicines/MyMedicines';
 
-function App() {
+const App = () => {
   const [selectedDate, setSelectedDate] = useState(moment());
   const { setMedicines } = useContext(AppContext);
 
@@ -63,6 +63,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;
